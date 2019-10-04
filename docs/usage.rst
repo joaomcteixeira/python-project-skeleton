@@ -2,6 +2,6 @@
 Usage
 =====
 
-To use Nameless in a project::
+To use SampleProject in a project::
 
-	import nameless
+	import sampleproject
