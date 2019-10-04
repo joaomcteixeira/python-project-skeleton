@@ -1,8 +1,11 @@
 graft src
+graft docs
 prune tests
 
 include LICENSE
 include README.rst
 include CHANGELOG.rst
+include AUTHORS.rst
+include CONTRIBUTING.rst
 
 global-exclude *.py[co] __pycache__
