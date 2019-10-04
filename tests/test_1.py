@@ -1,5 +1,6 @@
 import amodule
 
+
 def test_amodule():
     amodule.hello()
 

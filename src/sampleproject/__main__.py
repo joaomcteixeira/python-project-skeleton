@@ -1,3 +1,5 @@
+import os
+
 from sampleproject import cli_int1
 
 
