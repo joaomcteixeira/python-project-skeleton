@@ -1,5 +1,8 @@
-import os
+"""
+Package interface.
 
+This is the main package interface.
+"""
 from sampleproject import cli_int1
 
 

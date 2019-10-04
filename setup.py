@@ -1,20 +1,17 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-from __future__ import absolute_import
-from __future__ import print_function
+"""Setup dot py."""
+from __future__ import absolute_import, print_function
 
 import re
 from glob import glob
-from os.path import basename
-from os.path import dirname
-from os.path import join
-from os.path import splitext
+from os.path import basename, dirname, join, splitext
 
-from setuptools import find_packages
-from setuptools import setup
+from setuptools import find_packages, setup
 
 
 def read(*names, **kwargs):
+    """Read description files."""
     path = join(dirname(__file__), *names)
     with open(path, encoding=kwargs.get('encoding', 'utf8')) as fh:
         return fh.read()
