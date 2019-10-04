@@ -56,7 +56,7 @@ setup(
         'Topic :: Scientific/Engineering :: Bio-Informatics',
         ],
     project_urls={
-        'webpage': 'https://taurenmd.github.io',
+        'webpage': 'https://github.com/PythonPackageDistributionExample/sampleproject',
         # 'Documentation': 'https://python-nameless.readthedocs.io/',
         # 'Changelog': 'https://python-nameless.readthedocs.io/en/latest/changelog.html',
         # 'Issue Tracker': 'https://github.com/ionelmc/python-nameless/issues',
