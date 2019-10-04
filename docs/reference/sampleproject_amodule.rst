@@ -1,0 +1,5 @@
+AModule
+=======
+
+.. automodule:: amodule
+    :members:

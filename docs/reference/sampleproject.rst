@@ -8,5 +8,3 @@ sampleproject
 .. automodule:: sampleproject
     :members:
 
-.. automodule:: sampleproject.libs
-    :members:
