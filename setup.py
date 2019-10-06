@@ -30,7 +30,7 @@ long_description = '{}\n{}'.format(
 
 setup(
     name='jmct-sampleproject',
-    version='0.0.6',
+    version='0.0.7',
     description='sampleproject small description.',
     long_description=long_description,
     author='Joao Miguel Correia Teixeira',
