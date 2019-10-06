@@ -29,13 +29,13 @@ long_description = '{}\n{}'.format(
     )
 
 setup(
-    name='sampleproject',
-    version='0.1.0',
+    name='jmct-sampleproject',
+    version='0.0.4',
     description='sampleproject small description.',
     long_description=long_description,
     author='Joao Miguel Correia Teixeira',
     author_email='joaomcteixeira@gmail.com',
-    url='https://github.com/',
+    url='https://github.com/joaomcteixeira/python-project-skeleton',
     packages=find_packages('src'),
     package_dir={'': 'src'},
     py_modules=[splitext(basename(i))[0] for i in glob("src/*.py")],
@@ -53,10 +53,10 @@ setup(
         'Topic :: Scientific/Engineering :: Bio-Informatics',
         ],
     project_urls={
-        'webpage': 'https://github.com/PythonPackageDistributionExample/sampleproject',
-        # 'Documentation': 'https://python-nameless.readthedocs.io/',
-        # 'Changelog': 'https://python-nameless.readthedocs.io/en/latest/changelog.html',
-        # 'Issue Tracker': 'https://github.com/ionelmc/python-nameless/issues',
+        'webpage': 'https://github.com/joaomcteixeira/python-project-skeleton',
+        # 'Documentation': 'https://python-project-skeleton.readthedocs.io/',
+        # 'Changelog': 'https://python-project-skeleton.readthedocs.io/en/latest/changelog.html',
+        # 'Issue Tracker': 'https://github.com/joaomcteixeira/python-project-skeleton/issues',
         },
     keywords=[
         # eg: 'keyword1', 'keyword2', 'keyword3',
