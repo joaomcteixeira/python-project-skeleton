@@ -25,7 +25,7 @@ long_description = '{}\n{}'.format(
             '',
             read('README.rst'),
             ),
-    re.sub(':[a-z]+:`~?(.*?)`', r'``\1``', read('CHANGELOG.rst'))
+    re.sub(':[a-z]+:`~?(.*?)`', r'``\1``', read(join('docs', 'CHANGELOG.rst')))
     )
 
 setup(
