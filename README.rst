@@ -16,4 +16,4 @@ This is a skeleton template for a Python project aimed at distribution and conti
 Version
 =======
 
-v0.0.5
+v0.0.6
