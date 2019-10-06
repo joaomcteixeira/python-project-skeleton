@@ -1,4 +1,6 @@
 graft docs
+prune docs/html
+prune docs/latex
 prune tests
 
 include *.rst LICENSE
