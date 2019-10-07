@@ -19,6 +19,7 @@ if os.getenv('SPELLCHECK'):
     extensions += 'sphinxcontrib.spelling',
     spelling_show_suggestions = True
     spelling_lang = 'en_US'
+    spelling_word_list_filename = ['../spelling_wordlist.txt']
 
 source_suffix = '.rst'
 master_doc = 'index'

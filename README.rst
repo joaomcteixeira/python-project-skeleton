@@ -2,6 +2,12 @@
 Python Package Skeleton Template
 ================================
 
+This is a skeleton template for a Python project aimed at distribution and continuous integration.
+
+Stable version
+--------------
+
+Stable version is hosted at the `master branch`_ and `tagged accordingly`.
 
 .. image:: https://travis-ci.org/joaomcteixeira/python-project-skeleton.svg?branch=latest
     :target: https://travis-ci.org/joaomcteixeira/python-project-skeleton
@@ -11,16 +17,25 @@ Python Package Skeleton Template
     :target: https://python-project-skeleton.readthedocs.io/en/latest/index.html
     :alt: Documentation Status
 
+
+Latest Build
+------------
+
+The latest build is hosted at the `latest branch`_.
+
+
+.. image:: https://travis-ci.org/joaomcteixeira/python-project-skeleton.svg?branch=master
+    :target: https://travis-ci.org/joaomcteixeira/python-project-skeleton
+    :alt: Travis-CI
+
+.. image:: https://readthedocs.org/projects/python-project-skeleton/badge/?version=stable
+    :target: https://python-project-skeleton.readthedocs.io/en/stable/index.html
+    :alt: Documentation Status
+
 .. image:: https://api.codeclimate.com/v1/badges/d96cc9a1841a819cd4f5/maintainability
    :target: https://codeclimate.com/github/joaomcteixeira/python-project-skeleton/maintainability
    :alt: Maintainability
 
-.. image:: https://api.codeclimate.com/v1/badges/d96cc9a1841a819cd4f5/test_coverage
-   :target: https://codeclimate.com/github/joaomcteixeira/python-project-skeleton/test_coverage
-   :alt: Test Coverage
-
-
-This is a skeleton template for a Python project aimed at distribution and continuous integration.
 
 Documentation
 =============

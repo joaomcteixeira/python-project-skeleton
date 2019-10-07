@@ -9,3 +9,11 @@ kwargs
 callstack
 Changelog
 Indices
+RdD
+Analytics
+AModule
+Libs
+samplemodule
+sampleclass
+Docstrings
+Docstring
