@@ -17,7 +17,6 @@ Stable version is hosted at the `master branch`_ and `tagged accordingly`.
     :target: https://python-project-skeleton.readthedocs.io/en/latest/index.html
     :alt: Documentation Status
 
-
 Latest Build
 ============
 
@@ -36,6 +35,9 @@ The latest build is hosted at the `latest branch`_.
    :target: https://codeclimate.com/github/joaomcteixeira/python-project-skeleton
    :alt: Maintainability
 
+.. image:: https://api.codacy.com/project/badge/Grade/ae042ac066554bfab398024b0beea6a5?isInternal=true
+   :target: https://app.codacy.com/manual/joaomcteixeira/python-project-skeleton/dashboard?bid=14602881
+   :alt: Codacy Latest
 
 Documentation
 =============
