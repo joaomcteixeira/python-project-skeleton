@@ -14,7 +14,7 @@ Stable version
     :target: https://travis-ci.org/joaomcteixeira/python-project-skeleton
     :alt: Travis-CI
 
-.. image:: https://ci.appveyor.com/api/projects/status/cqcy2f9s9a7jhh2b?svg=true
+.. image:: https://ci.appveyor.com/api/projects/status/cqcy2f9s9a7jhh2b/branch/master?svg=true 
     :target: https://ci.appveyor.com/project/joaomcteixeira/python-project-skeleton
     :alt: Appveyor-CI
 
@@ -30,7 +30,7 @@ Latest Build
     :target: https://travis-ci.org/joaomcteixeira/python-project-skeleton
     :alt: Travis-CI
 
-.. image:: https://ci.appveyor.com/api/projects/status/cqcy2f9s9a7jhh2b/branch/master?svg=true 
+.. image:: https://ci.appveyor.com/api/projects/status/cqcy2f9s9a7jhh2b?svg=true
     :target: https://ci.appveyor.com/project/joaomcteixeira/python-project-skeleton
     :alt: Appveyor-CI
 
