@@ -2,30 +2,35 @@
 Python Package Skeleton Template
 ================================
 
-This is a skeleton template for a Python project aimed at distribution and continuous integration.
+This is a skeleton template for a Python project aimed at distribution and continuous integration. The repository intents to implement the latest best practices on joint software development in teams and continuous integration and deployment.
+
+You will find in this README all the references that motivated the current configuration.
 
 Stable version
 ==============
-
-Stable version is hosted at the `master branch`_ and `tagged accordingly`.
-
 .. image:: https://api.travis-ci.org/joaomcteixeira/python-project-skeleton.svg?branch=latest
     :target: https://travis-ci.org/joaomcteixeira/python-project-skeleton
     :alt: Travis-CI
+
+.. image:: https://ci.appveyor.com/api/projects/status/cqcy2f9s9a7jhh2b?svg=true
+    :target: https://ci.appveyor.com/project/joaomcteixeira/python-project-skeleton
+    :alt: Appveyor-CI
 
 .. image:: https://readthedocs.org/projects/python-project-skeleton/badge/?version=latest
     :target: https://python-project-skeleton.readthedocs.io/en/latest/index.html
     :alt: Documentation Status
 
+Stable version is hosted at the `master branch`_ and `tagged accordingly`.
+
 Latest Build
 ============
-
-The latest build is hosted at the `latest branch`_.
-
-
 .. image:: https://api.travis-ci.org/joaomcteixeira/python-project-skeleton.svg?branch=master
     :target: https://travis-ci.org/joaomcteixeira/python-project-skeleton
     :alt: Travis-CI
+
+.. image:: https://ci.appveyor.com/api/projects/status/cqcy2f9s9a7jhh2b/branch/master?svg=true 
+    :target: https://ci.appveyor.com/project/joaomcteixeira/python-project-skeleton
+    :alt: Appveyor-CI
 
 .. image:: https://readthedocs.org/projects/python-project-skeleton/badge/?version=stable
     :target: https://python-project-skeleton.readthedocs.io/en/stable/index.html
@@ -38,6 +43,8 @@ The latest build is hosted at the `latest branch`_.
 .. image:: https://api.codacy.com/project/badge/Grade/ae042ac066554bfab398024b0beea6a5?isInternal=true
    :target: https://app.codacy.com/manual/joaomcteixeira/python-project-skeleton/dashboard?bid=14602881
    :alt: Codacy Latest
+
+The latest build is hosted at the `latest branch`_.
 
 Documentation
 =============
