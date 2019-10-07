@@ -12,8 +12,9 @@ class SampleClass:
     def __init__(self):
         """Initiatlizes samples class."""
         return
-    
-    def true(self):
+
+    @staticmethod
+    def true():
         """Return True my friend."""
         return True
     
