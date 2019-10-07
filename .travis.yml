@@ -1,5 +1,5 @@
 dist: xenial
-language: pythoni
+language: python
 
 branches:
     only:
