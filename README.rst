@@ -62,7 +62,7 @@ Read the Docs allows straight forward implementation of Google Analytics trackin
 Version
 =======
 
-v0.0.7
+v0.0.8
 
 .. _tox workflow: https://github.com/joaomcteixeira/python-project-skeleton/blob/latest/tox.ini
 .. _latest: https://python-project-skeleton.readthedocs.io/en/latest/
