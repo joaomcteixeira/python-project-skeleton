@@ -3,12 +3,12 @@ Python Package Skeleton Template
 ================================
 
 
-.. image:: https://travis-ci.org/joaomcteixeira/python-project-skeleton.svg?branch=master
+.. image:: https://travis-ci.org/joaomcteixeira/python-project-skeleton.svg?branch=latest
     :target: https://travis-ci.org/joaomcteixeira/python-project-skeleton
     :alt: Travis-CI
 
 .. image:: https://readthedocs.org/projects/python-project-skeleton/badge/?version=latest
-    :target: https://python-project-skeleton.readthedocs.io/en/latest/?badge=latest
+    :target: https://python-project-skeleton.readthedocs.io/en/latest/index.html
     :alt: Documentation Status
 
 .. image:: https://api.codeclimate.com/v1/badges/d96cc9a1841a819cd4f5/maintainability
