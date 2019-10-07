@@ -14,8 +14,11 @@ env:
 
 matrix:
     include:
+        - python: '3.7'
+          env:
+            - TOXENV=check,spell,docs,safety
         - env:
-            - TOXENV=py37-cover,py37-nocov,check,spell,docs,safety
+            - TOXENV=py37-cover,py37-nocov
           python: '3.7'
 
 before_install:

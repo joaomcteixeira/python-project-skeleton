@@ -5,7 +5,6 @@ USAGE:
     samplecli1
 """
 
-var_not_used = 1
 
 def main():
     """Print helloe sample."""
