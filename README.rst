@@ -28,7 +28,7 @@ Documentation
 Read the Docs
 -------------
 
-Activate your project at `Read the Docs`_ (RdD), their web interface is easy enough to follow without further explanations. If your documentation is building under the `tox workflow`_ it will build in at Read the Docs.
+Activate your project at `Read the Docs platform`_ (RdD), their web interface is easy enough to follow without further explanations. If your documentation is building under the `tox workflow`_ it will build in at Read the Docs.
 
 Build version
 ~~~~~~~~~~~~~
@@ -53,5 +53,5 @@ v0.0.7
 .. _master branch: https://github.com/joaomcteixeira/python-project-skeleton/tree/master
 .. _latest branch: https://github.com/joaomcteixeira/python-project-skeleton/tree/latest
 .. _latest Github tag: https://github.com/joaomcteixeira/python-project-skeleton/tags
-.. _Read the Docs: https://readthedocs.org/
+.. _Read the Docs platform: https://readthedocs.org/
 .. _instructions: https://docs.readthedocs.io/en/stable/guides/google-analytics.html
