@@ -19,6 +19,8 @@ if os.getenv('SPELLCHECK'):
     extensions += 'sphinxcontrib.spelling',
     spelling_show_suggestions = True
     spelling_lang = 'en_US'
+    # https://sphinxcontrib-spelling.readthedocs.io/en/latest/customize.html
+    spelling_word_list_filename = ['../spelling_wordlist.txt']
 
 source_suffix = '.rst'
 master_doc = 'index'
@@ -26,7 +28,7 @@ project = 'SampleProject'
 year = '2019'
 author = 'Joao MC Teixeira'
 copyright = '{0}, {1}'.format(year, author)
-version = release = '0.1.0'
+version = release = '0.0.8'
 
 pygments_style = 'trac'
 templates_path = ['.']
