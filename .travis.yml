@@ -1,6 +1,11 @@
 dist: xenial
 language: python
 
+addons:
+  apt:
+    packages:
+      - libenchant-dev
+
 branches:
     only:
     - master
