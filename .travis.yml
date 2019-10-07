@@ -26,7 +26,7 @@ before_install:
   - uname -a
   - lsb_release -a || true
 install:
-  - python -mpip install --progress-bar off tox -rdevtools/requirements.txt
+  - python -m pip install --progress-bar=off tox -rdevtools/requirements.txt
   - virtualenv --version
   - easy_install --version
   - pip --version
