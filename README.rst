@@ -12,6 +12,10 @@ Stable version
     :target: https://travis-ci.org/joaomcteixeira/python-project-skeleton
     :alt: Travis-CI
 
+.. image:: https://ci.appveyor.com/api/projects/status/cqcy2f9s9a7jhh2b?svg=true
+    :target: https://ci.appveyor.com/project/joaomcteixeira/python-project-skeleton
+    :alt: Appveyor-CI
+
 .. image:: https://readthedocs.org/projects/python-project-skeleton/badge/?version=latest
     :target: https://python-project-skeleton.readthedocs.io/en/latest/index.html
     :alt: Documentation Status
@@ -23,6 +27,10 @@ Latest Build
 .. image:: https://api.travis-ci.org/joaomcteixeira/python-project-skeleton.svg?branch=master
     :target: https://travis-ci.org/joaomcteixeira/python-project-skeleton
     :alt: Travis-CI
+
+.. image:: https://ci.appveyor.com/api/projects/status/cqcy2f9s9a7jhh2b/branch/master?svg=true 
+    :target: https://ci.appveyor.com/project/joaomcteixeira/python-project-skeleton
+    :alt: Appveyor-CI
 
 .. image:: https://readthedocs.org/projects/python-project-skeleton/badge/?version=stable
     :target: https://python-project-skeleton.readthedocs.io/en/stable/index.html
