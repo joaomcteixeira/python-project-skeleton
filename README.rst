@@ -10,7 +10,7 @@ I intent to keep this repository up to date to my knowledge and needs. To give y
 
 Stable version
 ==============
-.. image:: https://api.travis-ci.org/joaomcteixeira/python-project-skeleton.svg?branch=latest
+.. image:: https://api.travis-ci.org/joaomcteixeira/python-project-skeleton.svg?branch=master
     :target: https://travis-ci.org/joaomcteixeira/python-project-skeleton
     :alt: Travis-CI
 
@@ -26,7 +26,7 @@ Stable version is hosted at the `master branch`_ and `tagged accordingly`.
 
 Latest Build
 ============
-.. image:: https://api.travis-ci.org/joaomcteixeira/python-project-skeleton.svg?branch=master
+.. image:: https://api.travis-ci.org/joaomcteixeira/python-project-skeleton.svg?branch=latest
     :target: https://travis-ci.org/joaomcteixeira/python-project-skeleton
     :alt: Travis-CI
 
