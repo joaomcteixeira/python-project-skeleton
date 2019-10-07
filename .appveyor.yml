@@ -1,10 +1,6 @@
 ---
 environment:
     matrix:
-    - TOXENV: check
-    - TOXENV: spell
-    - TOXENV: docs
-    - TOXENV: safety
     - TOXENV: py37-cover
     - TOXENV: py37-nocov
 
