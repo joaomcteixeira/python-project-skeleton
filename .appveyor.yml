@@ -35,4 +35,4 @@ install:
   - '%PYTHON_HOME%\Scripts\tox --version'  
 
 test_script:
-    - tox
+    - '%PYTHON_HOME%\Scripts\tox
