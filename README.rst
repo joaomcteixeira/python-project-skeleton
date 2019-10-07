@@ -2,9 +2,11 @@
 Python Package Skeleton Template
 ================================
 
-This is a skeleton template for a Python project aimed at distribution and continuous integration. The repository intents to implement the latest best practices on joint software development in teams and continuous integration and deployment.
+This is a skeleton template for a Python project aimed at distribution and continuous integration. The repository intents to implement the latest best practices in team software development, continuous integration and deployment.
 
 You will find in this README all the references that motivated the current configuration.
+
+I intent to keep this repository up to date to my knowledge and needs. To give your feedback or suggestion please raise an `issue`_.
 
 Stable version
 ==============
@@ -46,6 +48,11 @@ Latest Build
 
 The latest build is hosted at the `latest branch`_.
 
+Repository organization
+=======================
+
+Two main branches set the development workflow: 
+
 Documentation
 =============
 
@@ -71,6 +78,7 @@ Version
 
 v0.0.8
 
+.. _issue: https://github.com/joaomcteixeira/python-project-skeleton/issues
 .. _tox workflow: https://github.com/joaomcteixeira/python-project-skeleton/blob/latest/tox.ini
 .. _latest: https://python-project-skeleton.readthedocs.io/en/latest/
 .. _stable: https://python-project-skeleton.readthedocs.io/en/stable/
