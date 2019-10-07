@@ -21,7 +21,7 @@ matrix:
     include:
         - python: '3.7'
           env:
-            - TOXENV=check,spell,docs,safety,codecov,coveralls
+            - TOXENV=clean,check,spell,docs,safety,report
         - env:
             - TOXENV=py37-cover,py37-nocov
           python: '3.7'
@@ -42,6 +42,7 @@ after_failure:
   - more .tox/log/* | cat
   - more .tox/*/log/* | cat
 after_success:
+  - coveralls
   - bash <(curl -s https://codecov.io/bash)
 notifications:
   email:
