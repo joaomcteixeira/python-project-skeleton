@@ -22,7 +22,17 @@ Python Package Skeleton Template
 
 This is a skeleton template for a Python project aimed at distribution and continuous integration.
 
+Documentation
+=============
+
+Google Analytics
+----------------
+
+Read the Docs allows straight forward implementation of Google Analytics tracking in the project documention, just follow their instructions_
+
 Version
 =======
 
 v0.0.7
+
+.. _instructions: https://docs.readthedocs.io/en/stable/guides/google-analytics.html
