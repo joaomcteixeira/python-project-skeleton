@@ -6,6 +6,11 @@ Uniformed Tests
 
 Thanks to `Tox`_ we can have a uniform testing platform where all developers are forced to follow the same rules and, above all, all tests occur in a controlled Python environment.
 
+With **Tox**, the testing setup can be defined in a configuration file, the `tox.ini`_, which contains all the operations that are performed during the test phase. Therefore to run the tests developers just need to execute ``tox`` provided ``tox`` is installed in the developing Python environment.
+                                                                                   
+One of the great advantages of using Tox, aside from uniforming the testing routines across developers, is that tests actually take place in isolated environments where the source code has been installed. In order others, tests are performed in an environment simulating post-deployment instead of a development environment. Under this setup, there is no need, in general cases, to deploy test scripts along with the actual source.
+
+
 Before creating a Pull Request from your branch, certify that all the tests pass correctly by running:
 
 ::
@@ -59,7 +64,7 @@ Release Branches
     git checkout latest
     git checkout -b release/0.1.0
 
-Fix the final bugs, docs and minor corrections, and finally ``bump`` the version.
+Fix the final bugs, docs and minor corrections, and finally :ref:`bump the version<Bumpversion>`.
 
 ::
     
@@ -100,5 +105,15 @@ Work on the fix...
     git push origin latest
 
 
+Bumpversion
+-----------
+
+I found two main version string handlers around: `bumpversion`_ and `versioneer`_.
+I chose *bumpversion* for this repository template. Why? I have no argument against *versioneer*, simply I found `bumpversion`_ to be so simple, effective and configurable that I could only adopt it. Congratulations to both projets nonetheless.
+
+
+.. _tox.ini: https://github.com/joaomcteixeira/python-project-skeleton/blob/latest/tox.ini
 .. _Tox: https://tox.readthedocs.io/en/latest/
 .. _Gitflow Workflow: https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
+.. _bumpversion: https://pypi.org/project/bumpversion/
+.. _versioneer: https://github.com/warner/python-versioneer
