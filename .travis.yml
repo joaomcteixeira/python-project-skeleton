@@ -37,7 +37,11 @@ install:
   - pip --version
   - tox --version
 script:
+  # erase should not be necessary, but just in case.
+  - coverage erase
   - tox -v
+  - coverage report
+  - coverage html
 after_failure:
   - more .tox/log/* | cat
   - more .tox/*/log/* | cat
