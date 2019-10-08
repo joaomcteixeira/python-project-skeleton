@@ -10,41 +10,58 @@ I intent to keep this repository up to date to my knowledge and needs. To give y
 
 Stable version
 ==============
-.. image:: https://api.travis-ci.org/joaomcteixeira/python-project-skeleton.svg?branch=master
+.. image:: https://img.shields.io/travis/joaomcteixeira/python-project-skeleton/master?label=TravisCI
     :target: https://travis-ci.org/joaomcteixeira/python-project-skeleton
-    :alt: Travis-CI
+    :alt: Travis master branch
 
 .. image:: https://ci.appveyor.com/api/projects/status/cqcy2f9s9a7jhh2b/branch/master?svg=true 
     :target: https://ci.appveyor.com/project/joaomcteixeira/python-project-skeleton
-    :alt: Appveyor-CI
+    :alt: Appveyor master branch
 
-.. image:: https://readthedocs.org/projects/python-project-skeleton/badge/?version=latest
-    :target: https://python-project-skeleton.readthedocs.io/en/latest/index.html
-    :alt: Documentation Status
+.. image:: https://codecov.io/gh/joaomcteixeira/python-project-skeleton/branch/master/graph/badge.svg
+    :target: https://codecov.io/gh/joaomcteixeira/python-project-skeleton
+    :alt: Codecov master branch
+
+.. image:: https://img.shields.io/codacy/grade/ae042ac066554bfab398024b0beea6a5/master?label=Codacy
+    :target: https://app.codacy.com/manual/joaomcteixeira/python-project-skeleton/dashboard
+    :alt: Codacy master branch
+
+.. image:: https://img.shields.io/readthedocs/python-project-skeleton/stable?label=Read%20the%20Docs
+    :target: https://python-project-skeleton.readthedocs.io/en/stable/index.html
+    :alt: Read the Docs (stable)
+
 
 Stable version is hosted at the `master branch`_ and `tagged accordingly`.
 
 Latest Build
 ============
-.. image:: https://api.travis-ci.org/joaomcteixeira/python-project-skeleton.svg?branch=latest
+.. image:: https://img.shields.io/travis/joaomcteixeira/python-project-skeleton/latest?label=TravisCI
     :target: https://travis-ci.org/joaomcteixeira/python-project-skeleton
-    :alt: Travis-CI
+    :alt: Travis-CI latest branch
 
 .. image:: https://ci.appveyor.com/api/projects/status/cqcy2f9s9a7jhh2b?svg=true
     :target: https://ci.appveyor.com/project/joaomcteixeira/python-project-skeleton
-    :alt: Appveyor-CI
+    :alt: Appveyor-CI latest branch
 
-.. image:: https://readthedocs.org/projects/python-project-skeleton/badge/?version=stable
-    :target: https://python-project-skeleton.readthedocs.io/en/stable/index.html
-    :alt: Documentation Status
+.. image:: https://codecov.io/gh/joaomcteixeira/python-project-skeleton/branch/latest/graph/badge.svg
+    :target: https://codecov.io/gh/joaomcteixeira/python-project-skeleton
+    :alt: Codecov latest branch
+
+.. image:: https://img.shields.io/coveralls/github/joaomcteixeira/python-project-skeleton/latest?label=COVERALLS&logo=COVERALLS
+    :target: https://coveralls.io/github/joaomcteixeira/python-project-skeleton
+    :alt: Coveralls
+
+.. image:: https://img.shields.io/codacy/grade/ae042ac066554bfab398024b0beea6a5/latest?label=Codacy
+    :target: https://app.codacy.com/manual/joaomcteixeira/python-project-skeleton/dashboard
+    :alt: Codacy latest grade
 
 .. image:: https://api.codeclimate.com/v1/badges/d96cc9a1841a819cd4f5/maintainability
    :target: https://codeclimate.com/github/joaomcteixeira/python-project-skeleton
-   :alt: Maintainability
+   :alt: Code Climate
 
-.. image:: https://api.codacy.com/project/badge/Grade/ae042ac066554bfab398024b0beea6a5?isInternal=true
-   :target: https://app.codacy.com/manual/joaomcteixeira/python-project-skeleton/dashboard?bid=14602881
-   :alt: Codacy Latest
+.. image:: https://img.shields.io/readthedocs/python-project-skeleton/latest?label=Read%20the%20Docs
+    :target: https://python-project-skeleton.readthedocs.io/en/latest/index.html
+    :alt: Read the Docs (latest)
 
 The latest build is hosted at the `latest branch`_.
 
