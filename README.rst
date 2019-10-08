@@ -143,7 +143,7 @@ One of the great advantages of using Tox, aside from uniforming the testing rout
 Version
 =======
 
-v0.0.8
+v0.0.9
 
 .. _issue: https://github.com/joaomcteixeira/python-project-skeleton/issues
 .. _ionel: https://github.com/ionelmc
