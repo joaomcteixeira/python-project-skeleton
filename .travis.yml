@@ -23,7 +23,11 @@ matrix:
           env:
             - TOXENV=check,spell,docs,safety
         - env:
-            - TOXENV=py37-cover,py37-nocov
+            - TOXENV=clean,py37-cover,report
+            - SENDCOV=1
+          python: '3.7'
+        - env:
+            - TOXENV=py37-nocov
           python: '3.7'
 
 before_install:
@@ -37,19 +41,16 @@ install:
   - pip --version
   - tox --version
 script:
-  # erase should not be necessary, but just in case.
-  - coverage erase
   - tox -v
-  - coverage report
-  - coverage html
 after_failure:
   - more .tox/log/* | cat
   - more .tox/*/log/* | cat
 after_success:
   # sleeps to avoid https://github.com/codecov/codecov-python/issues/158
-  - sleep 30
-  - coveralls
-  - bash <(curl -s https://codecov.io/bash)
+  - |
+    if [[ SENDCOV ]]; then
+        sleep 30 && coveralls && bash <(curl -s https://codecov.io/bash)
+    fi
 notifications:
   email:
     on_success: never
