@@ -1,6 +1,21 @@
 Configuration
 =============
 
+CI Platforms
+------------
+
+AppVeyor
+~~~~~~~~
+
+Travis-CI
+~~~~~~~~~
+
+The configuration for `Travis-CI`_ is defined in the `` `.travis.yml`_ `` file.
+
+Overall, the Travis configuration defines how to execute the different `tox` environments defined in the `` `tox.ini`_ `` file.
+
+We do not explain the ``.travis.yml`` file in detail here to avoid duplicated information, rather you should read the comments provided in the file.
+
 Badges
 ------
 
@@ -15,3 +30,7 @@ You will notice that the badge Code Climate is missing in the master branch. I c
 I observed the same issue detailed in the above paragraph for COVERALLS, but then I realize that after the first commit to the master, COVERALLS actually displays nicely the information for both branches.
 
 .. _Shields.io: ttps://shields.io/
+.. _Travis-CI: https://travis-ci.org
+.. _.travis.yml: https://github.com/joaomcteixeira/python-project-skeleton/blob/latest/.travis.yml
+.. _tox: https://tox.readthedocs.io/en/latest/
+.. _tox.ini: https://github.com/joaomcteixeira/python-project-skeleton/blob/latest/tox.ini

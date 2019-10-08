@@ -17,15 +17,24 @@ env:
     - LD_PRELOAD=/lib/x86_64-linux-gnu/libSegFault.so
     - SEGFAULT_SIGNALS=all
 
+# creates three testing environments
 matrix:
     include:
+        # uses the latest supported python to docs and checks
         - python: '3.7'
           env:
             - TOXENV=check,spell,docs,safety
+        # performs test cover analysis running
+        # the different envs from tox.in
         - env:
             - TOXENV=clean,py37-cover,report
+            # sends cover data only once
+            # sending only for cover env
             - SENDCOV=1
           python: '3.7'
+        # tests without analysing coverage
+        # and hence, without sending coverage data
+        # see bellow
         - env:
             - TOXENV=py37-nocov
           python: '3.7'
@@ -46,6 +55,10 @@ after_failure:
   - more .tox/log/* | cat
   - more .tox/*/log/* | cat
 after_success:
+  # after_success is made to send coverage data to Codecov and COVERALLS
+  # this will only take occur for cover envs
+  # if cover and nocov envs send data to coverage servers it may create
+  # duplicated analysis and consequent wrong percentages.
   # sleeps to avoid https://github.com/codecov/codecov-python/issues/158
   - |
     if [[ $SENDCOV ]]; then
