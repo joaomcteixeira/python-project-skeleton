@@ -48,8 +48,10 @@ after_failure:
 after_success:
   # sleeps to avoid https://github.com/codecov/codecov-python/issues/158
   - |
-    if [[ SENDCOV ]]; then
+    if [[ $SENDCOV ]]; then
         sleep 30 && coveralls && bash <(curl -s https://codecov.io/bash)
+    else
+        echo "no coverage data sent"
     fi
 notifications:
   email:
