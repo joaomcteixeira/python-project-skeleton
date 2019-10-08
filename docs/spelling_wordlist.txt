@@ -21,3 +21,5 @@ cookiecutter
 src
 devtools
 Tox
+Appveyor
+Travis

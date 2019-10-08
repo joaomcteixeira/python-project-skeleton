@@ -7,6 +7,7 @@ Contents
 
    readme
    installation
+   configuration
    usage
    reference/index
    contributing
