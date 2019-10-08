@@ -1,10 +1,10 @@
 Repository Configuration
 ========================
 
-.. include:: _branch_organization.rst
+.. include:: i_branch_organization.rst
 
-.. include:: _project_layout.rst
+.. include:: i_project_layout.rst
 
-.. include:: _ci_platforms.rst
+.. include:: i_ci_platforms.rst
 
-.. include:: _readthedocs.rst
+.. include:: i_readthedocs.rst

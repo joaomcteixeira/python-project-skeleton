@@ -18,7 +18,7 @@ extensions = [
 ]
 
 exclude_patterns = [
-    '_*',
+    'i_*',
     ]
 
 if os.getenv('SPELLCHECK'):
