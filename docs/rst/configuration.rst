@@ -10,6 +10,8 @@ This project has two badge groups, one for the master (stable) branch and other 
 
 Each platform provide their own badges, yet you can further tune the badges style by creating your own personalized badge with `Shields.io`_.
 
-You will notice that the badges for Coveralls and Code Climate are missing in the master branch. I could not find yet a straightforward and easy implementation for several branches in these platforms, so, they report on the main branch set for the repository, in this case the *latest* branch. Also at `Shields.io` there is no shortcut to *branch* for these platforms as there is for others.
+You will notice that the badge Code Climate is missing in the master branch. I could not find yet a straightforward and easy implementation for several branches in CC, so, it reports on the main branch set for the repository, in this case the *latest* branch. Also at `Shields.io` there is no shortcut to *branch* for these platforms as there is for others.
+
+I observed the same issue detailed in the above paragraph for COVERALLS, but then I realize that after the first commit to the master, COVERALLS actually displays nicely the information for both branches.
 
 .. _Shields.io: ttps://shields.io/

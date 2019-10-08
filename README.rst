@@ -22,6 +22,10 @@ Stable version
     :target: https://codecov.io/gh/joaomcteixeira/python-project-skeleton
     :alt: Codecov master branch
 
+.. image:: https://img.shields.io/coveralls/github/joaomcteixeira/python-project-skeleton/master?label=COVERALLS&logo=COVERALLS
+    :target: https://coveralls.io/github/joaomcteixeira/python-project-skeleton
+    :alt: Coveralls master
+
 .. image:: https://img.shields.io/codacy/grade/ae042ac066554bfab398024b0beea6a5/master?label=Codacy
     :target: https://app.codacy.com/manual/joaomcteixeira/python-project-skeleton/dashboard
     :alt: Codacy master branch
@@ -49,7 +53,7 @@ Latest Build
 
 .. image:: https://img.shields.io/coveralls/github/joaomcteixeira/python-project-skeleton/latest?label=COVERALLS&logo=COVERALLS
     :target: https://coveralls.io/github/joaomcteixeira/python-project-skeleton
-    :alt: Coveralls
+    :alt: Coveralls latest
 
 .. image:: https://img.shields.io/codacy/grade/ae042ac066554bfab398024b0beea6a5/latest?label=Codacy
     :target: https://app.codacy.com/manual/joaomcteixeira/python-project-skeleton/dashboard

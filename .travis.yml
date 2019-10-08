@@ -42,6 +42,8 @@ after_failure:
   - more .tox/log/* | cat
   - more .tox/*/log/* | cat
 after_success:
+  # sleeps to avoid https://github.com/codecov/codecov-python/issues/158
+  - sleep 30
   - coveralls
   - bash <(curl -s https://codecov.io/bash)
 notifications:
