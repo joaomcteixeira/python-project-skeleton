@@ -153,7 +153,7 @@ Version
 
 v0.0.10
 
-.. _project's documentation: https://python-project-skeleton.readthedocs.io/
+.. _project's documentation: https://python-project-skeleton.readthedocs.io/en/latest/index.html
 .. _issue: https://github.com/joaomcteixeira/python-project-skeleton/issues
 .. _ionel: https://github.com/ionelmc
 .. _python-nameless: https://github.com/ionelmc/python-nameless

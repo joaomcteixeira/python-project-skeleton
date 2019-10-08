@@ -29,7 +29,7 @@ You will notice that the badge Code Climate is missing in the master branch. I c
 
 I observed the same issue detailed in the above paragraph for COVERALLS, but then I realize that after the first commit to the master, COVERALLS actually displays nicely the information for both branches.
 
-.. _Shields.io: ttps://shields.io/
+.. _Shields.io: https://shields.io/
 .. _Travis-CI: https://travis-ci.org
 .. _.travis.yml: https://github.com/joaomcteixeira/python-project-skeleton/blob/latest/.travis.yml
 .. _tox: https://tox.readthedocs.io/en/latest/
