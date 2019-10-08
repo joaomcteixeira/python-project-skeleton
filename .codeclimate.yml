@@ -1,0 +1,24 @@
+exclude_patterns:
+    - *.yml
+    - *.yaml
+    - *.cfg
+    - LICENSE
+    - *.rst
+    - *.in
+    - *.ini
+    - devtools/
+    - tests/
+    - docs/
+    # default values bellow
+    - config/
+    - db/
+    - dist/
+    - features/
+    - **/node_modules/
+    - script/
+    - **/spec/
+    - **/test/
+    - **/tests/
+    - **/vendor/
+    - **/*_test.go
+    - **/*.d.ts
