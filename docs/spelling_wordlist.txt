@@ -17,3 +17,7 @@ samplemodule
 sampleclass
 Docstrings
 Docstring
+cookiecutter
+src
+devtools
+Tox
