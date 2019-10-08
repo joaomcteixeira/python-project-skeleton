@@ -4,7 +4,7 @@ Python Package Skeleton Template
 
 This is a skeleton template for a Python project aimed at distribution and continuous integration. The repository intents to implement the latest best practices in team software development, continuous integration and deployment.
 
-You will find in this README all the references that motivated the current configuration.
+You will find in `project's documentation`_ all the references that motivated the current configuration.
 
 I intent to keep this repository up to date to my knowledge and needs. To give your feedback or suggestion please raise an `issue`_.
 
@@ -58,6 +58,10 @@ Latest Build
 .. image:: https://api.codeclimate.com/v1/badges/d96cc9a1841a819cd4f5/maintainability
    :target: https://codeclimate.com/github/joaomcteixeira/python-project-skeleton
    :alt: Code Climate
+
+.. image:: https://img.shields.io/codeclimate/tech-debt/joaomcteixeira/python-project-skeleton?label=Code%20Climate%20tech%20dept
+    :target: https://codeclimate.com/github/joaomcteixeira/python-project-skeleton
+    :alt: Code Climate technical debt
 
 .. image:: https://img.shields.io/readthedocs/python-project-skeleton/latest?label=Read%20the%20Docs
     :target: https://python-project-skeleton.readthedocs.io/en/latest/index.html
@@ -145,6 +149,7 @@ Version
 
 v0.0.9
 
+.. _project's documentation: https://python-project-skeleton.readthedocs.io/
 .. _issue: https://github.com/joaomcteixeira/python-project-skeleton/issues
 .. _ionel: https://github.com/ionelmc
 .. _python-nameless: https://github.com/ionelmc/python-nameless
