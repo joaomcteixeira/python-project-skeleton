@@ -21,5 +21,15 @@ cookiecutter
 src
 devtools
 Tox
+tox
 Appveyor
 Travis
+bumpversion
+hotfix
+hotfixes
+Hotfix
+Hotfixex
+rootdir
+Todo
+envs
+pre

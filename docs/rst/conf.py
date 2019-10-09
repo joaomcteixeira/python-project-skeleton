@@ -14,7 +14,15 @@ extensions = [
     'sphinx.ext.napoleon',
     'sphinx.ext.todo',
     'sphinx.ext.viewcode',
+    'sphinx.ext.autosectionlabel',
 ]
+
+todo_include_todos = True
+
+exclude_patterns = [
+    'i_*',
+    ]
+
 if os.getenv('SPELLCHECK'):
     extensions += 'sphinxcontrib.spelling',
     spelling_show_suggestions = True
@@ -28,14 +36,21 @@ project = 'SampleProject'
 year = '2019'
 author = 'Joao MC Teixeira'
 copyright = '{0}, {1}'.format(year, author)
-version = release = '0.0.10'
+version = release = '0.0.11'
 
 pygments_style = 'trac'
 templates_path = ['.']
 extlinks = {
-    'issue': ('https://github.com/PythonPackageDistributionExample/sampleproject/issues/%s', '#'),
-    'pr': ('https://github.com/PythonPackageDistributionExample/sampleproject/pull/%s', 'PR #'),
+    'issue': ('https://github.com/joaomcteixeira/python-project-skeleton/issues/%s', '#'),
+    'pr': ('https://github.com/joaomcteixeira/python-project-skeleton/pull/%s', 'PR #'),
 }
+
+# codecov io closes connection if host is accessed too repetitively.
+# codecov links are ignored here for the same reason there's a sleep
+# in the .travis.yml file
+# see https://github.com/codecov/codecov-python/issues/158
+linkcheck_ignore = [r'https://codecov.io/gh/joaomcteixeira/python-project-skeleton/*']
+
 import sphinx_py3doc_enhanced_theme
 html_theme = "sphinx_py3doc_enhanced_theme"
 html_theme_path = [sphinx_py3doc_enhanced_theme.get_html_theme_path()]
