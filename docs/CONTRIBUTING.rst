@@ -52,10 +52,15 @@ Also, you can run individual environments if you wish to test only specific func
 Branch workflow
 ---------------
 
-Branch workflow for development and contribution should follow the `Gitflow Workflow`_ guidelines. Please read careful through that guide. Here we highlight the general approach with our favorite ``--no-ff`` flag.
+External contributors
+~~~~~~~~~~~~~~~~~~~~~
+
+The following applies to external contributors, yet main developers can also follow these guidelines.
+
+Branch workflow for development and contribution should follow the `Gitflow Workflow`_ guidelines. Please read careful through that guide. Here we highlight the general approach with some tasteful additions such as the ``--no-ff`` flag.
 
 Clone your fork
-~~~~~~~~~~~~~~~
+```````````````
 
 Indeed the first thing to do is to clone your fork, and keep it `up to date with the upstream`_:
 
@@ -68,33 +73,43 @@ Indeed the first thing to do is to clone your fork, and keep it `up to date with
     git pull upstream latest
 
 New feature
-~~~~~~~~~~~
+```````````
+
+To work on a new feature, branch out from the ``latest`` branch:
 
 ::
     
     git checkout latest
     git checkout -b feature_branch
 
-Work on the feature ``:-)``, keep regular commit/pushes to your fork.
+Develop the feature and keep regular pushes to your fork with comprehensible commit messages.
 
 Push to latest
-~~~~~~~~~~~~~~
+``````````````
 
-You should create a Pull Request to the ``latest`` branch.
-If you are an official contributor to this repository and are sure the new feature branch passes tests, directly merge to the ``latest`` branch.
+To see your development accepted in the main project, you should create a `Pull Request`_ to the ``latest`` branch following the `PULLREQUEST.rst`_ guidelines.
+
+If you are an official contributor to this repository, have write permissions, and are sure the new feature branch passes tests, directly merge to the ``latest`` branch.
+
+You should `bump a patch<Bumpversion>` beforehand.
 
 ::
-    
+    # on your feature_branch
+    bumpversion patch --no-tag
+    git push origin feature_branch
     git checkout latest
     git merge --no-ff feature_branch
     git push origin latest
 
-The ``--no-ff`` option avoid ``Fastforward`` merging, keeping a record of the branching out/in history.
+The ``--no-ff`` option avoids ``Fastforward`` merging (`1`_, `2`_), keeping a record of the branching out/in history.
+
+To official contributors
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 Release Branches
-~~~~~~~~~~~~~~~~
+````````````````
 
-Create a short lived branch to prepare for the release candidate.
+Create a short lived branch to prepare for the release candidate, in this example ``release/0.1.0``.
 
 ::
     
@@ -104,10 +119,12 @@ Create a short lived branch to prepare for the release candidate.
 Fix the final bugs, docs and minor corrections, and finally :ref:`bump the version<Bumpversion>`.
 
 ::
-    
+    # first commit and push your changes
+    # then bump
     bumpversion patch|minor|major
+    git push origin release/0.1.0
 
-Finally, merge to ``master`` AND to ``latest``.
+Finally, merge to ``master`` AND from ``master`` to ``latest``.
 
 ::
     
@@ -115,7 +132,7 @@ Finally, merge to ``master`` AND to ``latest``.
     git merge --no-ff release/0.1.0
     git push origin master --tags
     git checkout latest
-    git merge --no-ff release/0.1.0
+    git merge --no-ff master
 
 Hotfixes from master
 ~~~~~~~~~~~~~~~~~~~~
@@ -130,15 +147,16 @@ The hotfix strategy is applied when a bug is identified in the production versio
 Work on the fix...
 
 ::
-    
-    git push origin hotfix_branch  # push yours commits to GitHub beforehand
+
+    # push yours commits to GitHub beforehand
+    git push origin hotfix_branch  
     bumpversion patch
-    git push origin hotfix_branch
+    git push origin hotfix_branch --tags
     git checkout master
     git merge --no-ff hotfix_branch
-    git push origin master --tags
+    git push origin master
     git checkout latest
-    git merge --no-ff hotfix_branch
+    git merge --no-ff master 
     git push origin latest
 
 
@@ -146,7 +164,7 @@ Bumpversion
 -----------
 
 I found two main version string handlers around: `bumpversion`_ and `versioneer`_.
-I chose *bumpversion* for this repository template. Why? I have no argument against *versioneer*, simply I found `bumpversion`_ to be so simple, effective and configurable that I could only adopt it. Congratulations to both projects nonetheless.
+I chose *bumpversion* for this repository template. Why? I have no argument against *versioneer* or others, simply I found `bumpversion`_ to be so simple, effective and configurable that I could only adopt it. Congratulations to both projects nonetheless.
 
 
 .. _tox.ini: https://github.com/joaomcteixeira/python-project-skeleton/blob/latest/tox.ini
@@ -157,5 +175,9 @@ I chose *bumpversion* for this repository template. Why? I have no argument agai
 .. _up to date with the upstream: https://gist.github.com/CristinaSolana/1885435
 .. _contributions to the project: https://github.com/joaomcteixeira/python-project-skeleton/network
 .. _Gitflow Workflow: https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
+.. _Pull Request: https://github.com/joaomcteixeira/python-project-skeleton/pulls
+.. _PULLRESQUEST.rst: https://github.com/joaomcteixeira/python-project-skeleton/blob/latest/docs/PULLREQUEST.rst
+.. _1: https://git-scm.com/docs/git-merge#Documentation/git-merge.txt---no-ff
+.. _2: https://stackoverflow.com/questions/9069061/what-is-the-difference-between-git-merge-and-git-merge-no-ff
 .. _bumpversion: https://pypi.org/project/bumpversion/
 .. _versioneer: https://github.com/warner/python-versioneer
