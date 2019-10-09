@@ -176,7 +176,7 @@ I chose *bumpversion* for this repository template. Why? I have no argument agai
 .. _contributions to the project: https://github.com/joaomcteixeira/python-project-skeleton/network
 .. _Gitflow Workflow: https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
 .. _Pull Request: https://github.com/joaomcteixeira/python-project-skeleton/pulls
-.. _PULLRESQUEST.rst: https://github.com/joaomcteixeira/python-project-skeleton/blob/latest/docs/PULLREQUEST.rst
+.. _PULLREQUEST.rst: https://github.com/joaomcteixeira/python-project-skeleton/blob/latest/docs/PULLREQUEST.rst
 .. _1: https://git-scm.com/docs/git-merge#Documentation/git-merge.txt---no-ff
 .. _2: https://stackoverflow.com/questions/9069061/what-is-the-difference-between-git-merge-and-git-merge-no-ff
 .. _bumpversion: https://pypi.org/project/bumpversion/

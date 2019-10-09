@@ -36,7 +36,7 @@ project = 'SampleProject'
 year = '2019'
 author = 'Joao MC Teixeira'
 copyright = '{0}, {1}'.format(year, author)
-version = release = '0.0.13'
+version = release = '0.0.14'
 
 pygments_style = 'trac'
 templates_path = ['.']
