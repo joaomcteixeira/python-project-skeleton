@@ -23,11 +23,15 @@ Docstring
 cookiecutter
 src
 devtools
+
 Tox
 tox
 Appveyor
 Travis
 bumpversion
+Codacy
+Codecov
+
 hotfix
 hotfixes
 Hotfix
@@ -36,3 +40,8 @@ rootdir
 Todo
 envs
 pre
+
+unittests
+unittest
+pytest
+pytests

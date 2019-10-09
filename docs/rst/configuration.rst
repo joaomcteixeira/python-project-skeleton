@@ -1,6 +1,8 @@
 Repository Configuration
 ========================
 
+This page explains how this template repository is organized by detailing the building blocks of the project skeleton.
+
 .. include:: i_branch_organization.rst
 
 .. include:: i_project_layout.rst

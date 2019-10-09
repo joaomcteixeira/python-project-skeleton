@@ -3,6 +3,15 @@ Read the Docs
 
 Activate your project at `Read the Docs platform`_ (RdD), their web interface is easy enough to follow without further explanations. If your documentation is building under the :ref:`tox workflow<Uniformed Tests>` it will build in at Read the Docs.
 
+Docs Requirements
+~~~~~~~~~~~~~~~~~
+
+Requirements to build the documentation page are listed in ``docs/requirements.txt``:
+
+.. literalinclude:: ../requirements.txt
+
+In this repository we are using `Sphinx`_ as documentation builder and the `sphinx-py3doc-enhanced-theme`_ as theme, though you can use many different theme flavors, see `Sphinx Themes`_.
+
 Build version
 ~~~~~~~~~~~~~
 
@@ -16,6 +25,9 @@ Google Analytics
 Read the Docs allows straight forward implementation of Google Analytics tracking in the project documentation, just follow their instructions_.
 
 .. _Read the Docs platform: https://readthedocs.org/
+.. _Sphinx: http://www.sphinx-doc.org/en/master/
+.. _Sphinx Themes: https://sphinx-themes.org/
+.. _sphinx-py3doc-enhanced-theme: https://github.com/ionelmc/sphinx-py3doc-enhanced-theme
 .. _latest Github tag: https://github.com/joaomcteixeira/python-project-skeleton/tags
 .. _instructions: https://docs.readthedocs.io/en/stable/guides/google-analytics.html
 .. _latest branch: https://github.com/joaomcteixeira/python-project-skeleton/tree/latest

@@ -63,7 +63,7 @@ Latest Build
    :target: https://codeclimate.com/github/joaomcteixeira/python-project-skeleton
    :alt: Code Climate
 
-.. image:: https://img.shields.io/codeclimate/tech-debt/joaomcteixeira/python-project-skeleton?label=Code%20Climate%20tech%20dept
+.. image:: https://img.shields.io/codeclimate/tech-debt/joaomcteixeira/python-project-skeleton?label=Code%20Climate%20tech%20debt
     :target: https://codeclimate.com/github/joaomcteixeira/python-project-skeleton
     :alt: Code Climate technical debt
 
@@ -88,7 +88,7 @@ The whole repository structure and CI layout has strongly influenced by the disc
 Version
 =======
 
-v0.0.15
+v0.0.16
 
 .. _project's documentation: https://python-project-skeleton.readthedocs.io/en/latest/index.html
 .. _issue: https://github.com/joaomcteixeira/python-project-skeleton/issues
