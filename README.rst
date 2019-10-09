@@ -88,7 +88,7 @@ The whole repository structure and CI layout has strongly influenced by the disc
 Version
 =======
 
-v0.0.11
+v0.0.12
 
 .. _project's documentation: https://python-project-skeleton.readthedocs.io/en/latest/index.html
 .. _issue: https://github.com/joaomcteixeira/python-project-skeleton/issues
