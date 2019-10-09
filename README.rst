@@ -4,7 +4,7 @@ Python Package Skeleton Template
 
 This is a **project skeleton template** for a **Python project/library**. The repository intents to implement the latest best practices in team software development, continuous integration and deployment.
 
-You will find in **`project's documentation`_** all references that motivated the current configuration as well as detailed explanation on the different configuration files.
+You will find in the `project's documentation`_ all references that motivated the current configuration as well as detailed explanation on the different configuration files.
 
 I intent to keep this repository up to date to my knowledge and needs. Your feedback and suggestions are highly appreciated, please raise an `issue`_ and share your thoughts.
 
