@@ -79,6 +79,43 @@ Here we mirror the `.codeclimate.yml`_ file:
 .. literalinclude:: ../../.codeclimate.yml
     :language: yaml
 
+Code coverage
+~~~~~~~~~~~~~
+
+Codecov
+```````
+
+`Codecov`_ is used very frequently to report test coverage rates the software under development. Activate your repository under Codecov as done for any other CI platform. Additional configurations:
+
+* In general settings change the default branch to the :code:`latest` branch, if that is your preferred settings.
+
+Coveralls
+`````````
+
+`Coveralls` is also included in this template skeleton. Again, activate the coveralls profile by linking your repository to the server (same as with other CI platforms).
+
+The configuration to Coveralls, :code:`.coveragerc` is the same as of :ref:`Codecov`.
+
+Sending coverage reports
+````````````````````````
+
+`Coverage`_ reports are sent to both Codecov and Coveralls servers during the :ref:`Travis-tox<Travis-CI>` :code:`-cover` environment. `.travis.yml`_ configuration handles this and you do not need to worry about nothing else.
+
+The options specific to Codecov report (actually `coverage`_ package) are described in `.coveragerc`_ file, mirrored bellow, description of the configuration file is provided as comments.
+
+.. literalinclude:: ../../.coveragerc
+
+The :code:`.coveragerc` can be expanded to further restraint coverage analysis, for example adding these lines to the :code:`exclude` tag:
+
+::
+
+    [report]
+    exclude_lines =
+        if self.debug:
+        pragma: no cover
+        raise NotImplementedError
+        if __name__ == .__main__.:
+
 Badges
 ------
 
@@ -102,5 +139,8 @@ I observed this same issue for COVERALLS, but then I realize that after the firs
 .. _.codeclimate.yml: https://github.com/joaomcteixeira/python-project-skeleton/blob/latest/.codeclimate.yml
 .. _Codacy: https://app.codacy.com/
 .. _Code Climate: https://codeclimate.com/
+.. _coverage: https://pypi.org/project/coverage/
+.. _.coveragerc: https://github.com/joaomcteixeira/python-project-skeleton/blob/latest/.coveragerc
+
 .. _Shields.io: https://shields.io/
 
