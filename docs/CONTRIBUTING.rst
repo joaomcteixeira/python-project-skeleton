@@ -37,9 +37,9 @@ Either under *pip* or *conda*, install the package in :code:`develop` mode, and 
 
     python setup.py develop
     # for pip
-    pip install tox
+    pip install tox bumpversion
     # for conda
-    conda install tox
+    conda install tox bumpversion -c conda-forge
 
 Under this configuration the source you edit in the repository git folder is automatically reflected in the development installation.
 

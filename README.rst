@@ -2,7 +2,7 @@
 Python Package Skeleton Template
 ================================
 
-This is a **project skeleton template** for a **Python project/library**. The repository intents to implement and explain the latest best practices in team software development, continuous integration and deployment.
+This is a **project skeleton template** for a **Python project/library**. The repository intents to implement and explain the latest best practices in team software development, continuous integration and deployment. The repository simulates the implementation of a :code:`sampleproject`.
 
 You will find in the `project's documentation`_ all references that motivated the current configuration as well as detailed explanation on the different configuration files.
 
@@ -92,7 +92,7 @@ The whole repository structure and CI layout has strongly influenced by the disc
 Version
 =======
 
-v0.0.18
+v0.0.19
 
 .. _project's documentation: https://python-project-skeleton.readthedocs.io/en/latest/index.html
 .. _issue: https://github.com/joaomcteixeira/python-project-skeleton/issues
