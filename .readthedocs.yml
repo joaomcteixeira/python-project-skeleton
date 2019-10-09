@@ -22,6 +22,6 @@ python:
         extra_requirements:
             - docs
       - method: setuptools
-        path: python-project-skeleton
+        path: . 
    system_packages: true
 
