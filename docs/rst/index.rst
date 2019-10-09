@@ -10,9 +10,9 @@ Contents
    installation
    usage
    contributing
-   authors
    reference/index
    changelog
+   authors
 
 Indices and tables
 ==================

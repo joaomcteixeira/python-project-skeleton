@@ -2,11 +2,13 @@
 Python Package Skeleton Template
 ================================
 
-This is a **project skeleton template** for a **Python project/library**. The repository intents to implement the latest best practices in team software development, continuous integration and deployment.
+This is a **project skeleton template** for a **Python project/library**. The repository intents to implement and explain the latest best practices in team software development, continuous integration and deployment.
 
 You will find in the `project's documentation`_ all references that motivated the current configuration as well as detailed explanation on the different configuration files.
 
 I intent to keep this repository up to date to my knowledge and needs. Your feedback and suggestions are highly appreciated, please raise an `issue`_ and share your thoughts.
+
+.. start-badges
 
 Stable version
 ==============
@@ -73,6 +75,8 @@ Latest Build
 
 The latest build is hosted at the `latest branch`_.
 
+.. end-badges
+
 Motivation
 ==========
 
@@ -88,7 +92,7 @@ The whole repository structure and CI layout has strongly influenced by the disc
 Version
 =======
 
-v0.0.17
+v0.0.18
 
 .. _project's documentation: https://python-project-skeleton.readthedocs.io/en/latest/index.html
 .. _issue: https://github.com/joaomcteixeira/python-project-skeleton/issues

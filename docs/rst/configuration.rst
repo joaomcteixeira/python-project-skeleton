@@ -10,3 +10,5 @@ This page explains how this template repository is organized by detailing the bu
 .. include:: i_ci_platforms.rst
 
 .. include:: i_readthedocs.rst
+
+.. include:: i_badges.rst
