@@ -17,6 +17,8 @@ extensions = [
     'sphinx.ext.autosectionlabel',
 ]
 
+todo_include_todos = True
+
 exclude_patterns = [
     'i_*',
     ]
@@ -39,8 +41,8 @@ version = release = '0.0.10'
 pygments_style = 'trac'
 templates_path = ['.']
 extlinks = {
-    'issue': ('https://github.com/PythonPackageDistributionExample/sampleproject/issues/%s', '#'),
-    'pr': ('https://github.com/PythonPackageDistributionExample/sampleproject/pull/%s', 'PR #'),
+    'issue': ('https://github.com/joaomcteixeira/python-project-skeleton/issues/%s', '#'),
+    'pr': ('https://github.com/joaomcteixeira/python-project-skeleton/pull/%s', 'PR #'),
 }
 
 # codecov io closes connection if host is accessed too repetitively.

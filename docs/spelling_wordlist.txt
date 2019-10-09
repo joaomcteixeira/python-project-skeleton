@@ -30,3 +30,6 @@ hotfixes
 Hotfix
 Hotfixex
 rootdir
+Todo
+envs
+pre

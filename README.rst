@@ -2,9 +2,9 @@
 Python Package Skeleton Template
 ================================
 
-This is a skeleton template for a Python project aimed at distribution and continuous integration. The repository intents to implement the latest best practices in team software development, continuous integration and deployment.
+This is a **project skeleton template** for a **Python project/library**. The repository intents to implement the latest best practices in team software development, continuous integration and deployment.
 
-You will find in `project's documentation`_ all references that motivated the current configuration as well as detailed explanation on the different configuration files.
+You will find in **`project's documentation`_** all references that motivated the current configuration as well as detailed explanation on the different configuration files.
 
 I intent to keep this repository up to date to my knowledge and needs. Your feedback and suggestions are highly appreciated, please raise an `issue`_ and share your thoughts.
 
@@ -76,14 +76,14 @@ The latest build is hosted at the `latest branch`_.
 Motivation
 ==========
 
-Understand and implement in the best practices in software development and deployment for scientific software.
+Understand and implement in the best practices in software development and deployment for scientific software; actually I think the strategy reviewed here can be applied at many other development contexts.
 
 This repository does NOT intent to be a `cookiecutter`_-like repository. Thought there are many and very well documented cookiecutter templates out there, `even for scientific software`_, I felt that directly using a cookiecutter would lead me nowhere because I would miss the whole understanding of what the cookiecutter is automatizing in the first place. Therefore, building a repository from scratch was the only and best approach to achieve a minimum understanding of best practices and protocols.
 
 Acknowledgments
 ===============
 
-The whole repository structure and CI layout has a strong influence from the discussions provided by `ionel`_ in his `blog post`_ about *Packaging a python library*. I really recommend reading through that post and the other related posts in his blog. `python-nameless`_ and `cookiecutter-pylibrary`_ are two repositories that served as main source of information for this template repositories; other sources of information were also important and those are referenced within context.
+The whole repository structure and CI layout has strongly influenced by the discussions provided by `ionel`_ in his `blog post`_ about *Packaging a python library*. I really recommend reading through that post and the other related posts in his blog. Hence, `python-nameless`_ and `cookiecutter-pylibrary`_ are two repositories that served as main source of information for the *python-project-skeleton* repository; other sources of information were also important and those are referenced within context.
 
 Version
 =======
