@@ -29,9 +29,9 @@ long_description = '{}\n{}'.format(
     )
 
 setup(
-    name='jmct-sampleproject',
-    version='0.0.11',
-    description='sampleproject small description.',
+    name='sampleproject',
+    version='0.1.0',
+    description='A skeleton template for Python projects.',
     long_description=long_description,
     author='Joao Miguel Correia Teixeira',
     author_email='joaomcteixeira@gmail.com',
@@ -45,20 +45,25 @@ setup(
         # complete classifier list:
         # http://pypi.python.org/pypi?%3Aaction=list_classifiers
         'Development Status :: 3 - Alpha',
-        'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)',
+        # 'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)',
+        'License :: OSI Approved :: MIT License',
         'Intended Audience :: Science/Research',
         'Natural Language :: English',
         'Operating System :: POSIX',
+        'Operating System :: MacOS',
+        'Operating System :: Microsoft',
         'Programming Language :: Python :: 3.7',
         'Topic :: Scientific/Engineering :: Bio-Informatics',
         ],
     project_urls={
         'webpage': 'https://github.com/joaomcteixeira/python-project-skeleton',
-        # 'Documentation': 'https://python-project-skeleton.readthedocs.io/',
-        # 'Changelog': 'https://python-project-skeleton.readthedocs.io/en/latest/changelog.html',
-        # 'Issue Tracker': 'https://github.com/joaomcteixeira/python-project-skeleton/issues',
+        'Documentation': 'https://python-project-skeleton.readthedocs.io/en/latest/',
+        'Changelog': 'https://github.com/joaomcteixeira/python-project-skeleton/blob/latest/docs/CHANGELOG.rst',
+        'Issue Tracker': 'https://github.com/joaomcteixeira/python-project-skeleton/issues',
         },
     keywords=[
+        'ci', 'continuous-integration', 'project-template',
+        'project-skeleton',
         # eg: 'keyword1', 'keyword2', 'keyword3',
         ],
     python_requires='==3.7.*',
@@ -77,9 +82,10 @@ setup(
         #   'setuptools_scm>=3.3.1',
         ],
     entry_points={
-        # 'console_scripts': [
-        #     'nameless = nameless.cli:main',
-        # ]
+        'console_scripts': [
+            'samplecli1= sampleproject.cli_int1:main',
+            ]
+        #
         },
     # cmdclass={'build_ext': optional_build_ext},
     # ext_modules=[

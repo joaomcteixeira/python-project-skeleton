@@ -5,6 +5,11 @@ source = src
 branch = true
 source =
     src
+    # you can add here the test folder
+    # though tracking tests coverage might be
+    # out of sense and may disturb the percentage reported
+    #
+    # tests
 parallel = true
 
 [report]

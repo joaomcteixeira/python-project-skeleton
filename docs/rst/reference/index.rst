@@ -1,5 +1,5 @@
-Reference
-=========
+Source documentation
+====================
 
 .. toctree::
     :glob:
