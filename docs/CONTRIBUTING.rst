@@ -115,6 +115,7 @@ Create a short lived branch to prepare for the release candidate, in this exampl
 Fix the final bugs, docs and minor corrections, and finally :ref:`bump the version<Bumpversion>`.
 
 ::
+    
     # first commit and push your changes
     # then bump
     bumpversion patch|minor|major
