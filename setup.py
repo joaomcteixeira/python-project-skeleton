@@ -30,7 +30,7 @@ long_description = '{}\n{}'.format(
 
 setup(
     name='sampleproject',
-    version='0.1.0',
+    version='0.2.0',
     description='A skeleton template for Python projects.',
     long_description=long_description,
     author='Joao Miguel Correia Teixeira',
