@@ -2,7 +2,15 @@
 from __future__ import unicode_literals
 
 import os
+import mock
+import sys
 
+mock_modules = [
+    'matplotlib',
+    ]
+
+for modulename in mock_modules:
+    sys.modules[modulename] = mock.Mock()
 
 extensions = [
     'sphinx.ext.autodoc',
@@ -33,7 +41,7 @@ if os.getenv('SPELLCHECK'):
 source_suffix = '.rst'
 master_doc = 'index'
 project = 'Python-Project-Skeleton'
-year = '2019'
+year = '2020'
 author = 'Joao MC Teixeira'
 copyright = '{0}, {1}'.format(year, author)
 version = release = '0.1.0'
