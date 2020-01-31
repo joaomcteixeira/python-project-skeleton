@@ -30,7 +30,7 @@ long_description = '{}\n{}'.format(
 
 setup(
     name='sampleproject',
-    version='0.1.0',
+    version='0.2.0',
     description='A skeleton template for Python projects.',
     long_description=long_description,
     author='Joao Miguel Correia Teixeira',
@@ -53,6 +53,7 @@ setup(
         'Operating System :: MacOS',
         'Operating System :: Microsoft',
         'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
         'Topic :: Scientific/Engineering :: Bio-Informatics',
         ],
     project_urls={
@@ -66,7 +67,7 @@ setup(
         'project-skeleton',
         # eg: 'keyword1', 'keyword2', 'keyword3',
         ],
-    python_requires='==3.7.*',
+    python_requires='>=3.6, <3.9',
     install_requires=[
         'matplotlib>=3',
         # 'click',

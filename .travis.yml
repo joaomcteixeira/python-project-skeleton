@@ -1,71 +1,174 @@
-dist: xenial
 language: python
+dist: bionic
 
-addons:
-  apt:
-    packages:
-      - libenchant-dev
-
+# safelist
 branches:
-    only:
+  only:
     - master
     - latest
 
-cache: false
-env:
-  global:
-    - LD_PRELOAD=/lib/x86_64-linux-gnu/libSegFault.so
-    - SEGFAULT_SIGNALS=all
+matrix: 
+  include:
+    - name: "Windows Choco 3.8 TOXENV=Check,Radon"
+      os: windows
+      language: sh
+      python: 3.8
+      env: 
+        - TOXENV=check,radon
+        - PATH=/c/Python38:/c/Python38/Scripts:$PATH
+      before_install:
+        - choco install python --version=3.8.1
+        - pip3 install --upgrade --user pip
 
-# creates three testing environments
-matrix:
-    include:
-        # uses the latest supported python to docs and checks
-        - python: '3.7'
-          env:
-            - TOXENV=check,spell,docs,safety
-        # performs test cover analysis running
-        # the different envs from tox.in
-        - env:
-            - TOXENV=clean,py37-cover,report
-            # sends cover data only once
-            # sending only for cover env
-            - SENDCOV=1
-          python: '3.7'
-        # tests without analysing coverage
-        # and hence, without sending coverage data
-        # see bellow
-        - env:
-            - TOXENV=py37-nocov
-          python: '3.7'
+    - name: "Windows Choco 3.7 TOXENV=docs"
+      os: windows
+      language: sh
+      python: 3.7
+      env:
+        - TOXENV=docs
+        - PATH=/c/Python37:/c/Python37/Scripts:$PATH
+      before_install:
+        - choco install python --version=3.7.6
+        - pip3 install --upgrade --user pip
+    
+    - name: "Windows Choco 3.8 TOXENV=py38,codecov,coveralls"
+      os: windows
+      language: sh
+      python: 3.8
+      env: 
+        - TOXENV=py38,codecov,coveralls
+        - PATH=/c/Python38:/c/Python38/Scripts:$PATH
+      before_install:
+        - choco install python --version=3.8.1
+        - pip3 install --upgrade --user pip
 
-before_install:
-  - python --version
-  - uname -a
-  - lsb_release -a || true
+    - name: "Windows Choco 3.7 TOXENV=py37,coveralls"
+      os: windows
+      language: sh
+      python: 3.7
+      env:
+        - TOXENV=py37,codecov,coveralls
+        - PATH=/c/Python37:/c/Python37/Scripts:$PATH
+      before_install:
+        - choco install python --version=3.7.6
+        - pip3 install --upgrade --user pip
+
+    - name: "Windows Choco 3.6 TOXENV=py36,codecov,coveralls"
+      os: windows
+      language: sh
+      python: 3.6
+      env:
+        - TOXENV=py36,codecov,coveralls
+        - PATH=/c/Python36:/c/Python36/Scripts:$PATH
+      before_install:
+        - choco install python --version=3.6.8
+        - pip3 install --upgrade --user pip
+
+    - name: "Linux Python 3.8 TOXENV=check,radon"
+      os: linux
+      python: 3.8
+      env: TOXENV=check,radon
+      before_install:
+        - python -m pip install --upgrade pip wheel
+
+    - name: "Linux Python 3.8 TOXENV=docs"
+      os: linux
+      python: 3.7
+      env: TOXENV=docs
+      before_install:
+        - python -m pip install --upgrade pip wheel
+
+    - name: "Linux Python 3.8 TOXENV=py38,codecov,coveralls"
+      os: linux
+      python: 3.8
+      env: TOXENV=py38,codecov,coveralls
+      before_install:
+        - python -m pip install --upgrade pip wheel
+    
+    - name: "Linux Python 3.7 TOXENV=py37,codecov,coveralls"
+      os: linux
+      python: 3.7
+      env: TOXENV=py37,codecov,coveralls
+      before_install:
+        - python -m pip install --upgrade pip wheel
+
+    - name: "Linux Python 3.6 TOXENV=py36,codecov,coveralls"
+      os: linux
+      python: 3.6
+      env: TOXENV=py36,codecov,coveralls
+      before_install:
+        - python -m pip install --upgrade pip wheel
+
+    - name: "OSX Default Python 3.7 TOXENV=check,radon"
+      os: osx
+      osx_image: xcode11.3
+      language: sh
+      env:
+        TOXENV=check,radon
+      before_install:
+        - python3 -m pip install --upgrade pip wheel
+
+    - name: "OSX Default Python 3.7 TOXENV=docs"
+      os: osx
+      osx_image: xcode11.3
+      language: sh
+      env: TOXENV=docs
+      before_install:
+        - python3 -m pip install --upgrade pip wheel
+
+    - name: "OSX Conda 3.8 TOXENV=py38,codecov,coveralls"
+      os: osx
+      osx_image: xcode11.3
+      language: sh
+      python: "3.8"
+      env: TOXENV=py38,codecov,coveralls
+      before_install:
+        - wget https://repo.continuum.io/miniconda/Miniconda3-4.7.12.1-MacOSX-x86_64.sh -O miniconda.sh
+        - bash miniconda.sh -b -p $HOME/miniconda
+        - source "$HOME/miniconda/etc/profile.d/conda.sh"
+        - hash -r
+        - conda config --set always_yes yes --set changeps1 no
+        - conda update -q conda
+        - conda info -a
+        - conda create -q -n travenv python=$TRAVIS_PYTHON_VERSION
+        - conda activate travenv
+    
+    - name: "OSX Default Python 3.7 TOXENV=py37,codecov,coveralls"
+      os: osx
+      osx_image: xcode11.3
+      language: sh
+      env: TOXENV=py37,codecov,coveralls
+      before_install:
+        - python3 -m pip install --upgrade pip wheel
+
+    - name: "OSX Brew Python 3.6 TOXENV=py36,codecov,coveralls"
+      os: osx
+      osx_image: xcode11.3
+      language: sh
+      env: TOXENV=py36,codecov,coveralls
+      before_install:
+        # https://stackoverflow.com/questions/51125013/
+        - brew unlink python
+        - brew uninstall --ignore-dependencies openssl; brew install https://github.com/tebelorg/Tump/releases/download/v1.0.0/openssl.rb
+        - brew install --ignore-dependencies https://raw.githubusercontent.com/Homebrew/homebrew-core/f2a764ef944b1080be64bd88dca9a1d80130c558/Formula/python.rb
+        - brew info python
+        - brew switch python 3.6.5_1
+        - python3 -m pip install --upgrade pip wheel
+      addons:
+        homebrew:
+          packages: python
+
 install:
-  - python -m pip install --progress-bar=off tox -rdevtools/requirements.txt
-  - virtualenv --version
-  - easy_install --version
-  - pip --version
+  - pip3 install tox tox-venv
   - tox --version
+
 script:
   - tox -v
+
 after_failure:
   - more .tox/log/* | cat
   - more .tox/*/log/* | cat
-after_success:
-  # after_success is made to send coverage data to Codecov and COVERALLS
-  # this will only take occur for cover envs
-  # if cover and nocov envs send data to coverage servers it may create
-  # duplicated analysis and consequent wrong percentages.
-  # sleeps to avoid https://github.com/codecov/codecov-python/issues/158
-  - |
-    if [[ $SENDCOV ]]; then
-        sleep 30 && coveralls && bash <(curl -s https://codecov.io/bash)
-    else
-        echo "no coverage data sent"
-    fi
+
 notifications:
   email:
     on_success: never
