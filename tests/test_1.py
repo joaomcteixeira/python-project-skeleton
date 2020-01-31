@@ -1,5 +1,4 @@
 """Performs general tests."""
-
 import amodule
 from sampleproject.libs import samplemodule as SM
 
