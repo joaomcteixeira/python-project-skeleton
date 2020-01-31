@@ -1,18 +1,17 @@
 [paths]
-source = src
+source =
+    src
+    */site-packages
 
 [run]
 branch = true
 source =
-    src
-    # you can add here the test folder
-    # though tracking tests coverage might be
-    # out of sense and may disturb the percentage reported
-    #
-    # tests
+    sampleproject
 parallel = true
 
 [report]
 show_missing = true
 precision = 2
 omit = *migrations*
+exclude_lines = 
+    if __name__ == .__main__.:

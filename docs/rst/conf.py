@@ -1,8 +1,20 @@
 # -*- coding: utf-8 -*-
+"""Config file for Sphinx-docs."""
 from __future__ import unicode_literals
 
 import os
+import mock
+import sys
 
+import sphinx_py3doc_enhanced_theme
+
+
+mock_modules = [
+    'matplotlib',
+    ]
+
+for modulename in mock_modules:
+    sys.modules[modulename] = mock.Mock()
 
 extensions = [
     'sphinx.ext.autodoc',
@@ -15,7 +27,7 @@ extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.viewcode',
     'sphinx.ext.autosectionlabel',
-]
+    ]
 
 todo_include_todos = True
 
@@ -33,7 +45,7 @@ if os.getenv('SPELLCHECK'):
 source_suffix = '.rst'
 master_doc = 'index'
 project = 'Python-Project-Skeleton'
-year = '2019'
+year = '2020'
 author = 'Joao MC Teixeira'
 copyright = '{0}, {1}'.format(year, author)
 version = release = '0.1.0'
@@ -41,29 +53,30 @@ version = release = '0.1.0'
 pygments_style = 'trac'
 templates_path = ['.']
 extlinks = {
-    'issue': ('https://github.com/joaomcteixeira/python-project-skeleton/issues/%s', '#'),
-    'pr': ('https://github.com/joaomcteixeira/python-project-skeleton/pull/%s', 'PR #'),
-}
+    'issue': ('https://github.com/joaomcteixeira/python-project-skeleton/issues/%s', '#'),  # noqa: E501
+    'pr': ('https://github.com/joaomcteixeira/python-project-skeleton/pull/%s', 'PR #'),  # noqa: E501
+    }
 
 # codecov io closes connection if host is accessed too repetitively.
 # codecov links are ignored here for the same reason there's a sleep
 # in the .travis.yml file
 # see https://github.com/codecov/codecov-python/issues/158
-linkcheck_ignore = [r'https://codecov.io/gh/joaomcteixeira/python-project-skeleton/*']
+linkcheck_ignore = [
+    r'https://codecov.io/gh/joaomcteixeira/python-project-skeleton/*',
+    ]
 
-import sphinx_py3doc_enhanced_theme
 html_theme = "sphinx_py3doc_enhanced_theme"
 html_theme_path = [sphinx_py3doc_enhanced_theme.get_html_theme_path()]
 html_theme_options = {
-    'githuburl': 'https://github.com/PythonPackageDistributionExample/sampleproject'
-}
+    'githuburl': 'https://github.com/PythonPackageDistributionExample/sampleproject',  # noqa: E501
+    }
 
 html_use_smartypants = True
 html_last_updated_fmt = '%b %d, %Y'
 html_split_index = False
 html_sidebars = {
-   '**': ['searchbox.html', 'globaltoc.html', 'sourcelink.html'],
-}
+    '**': ['searchbox.html', 'globaltoc.html', 'sourcelink.html'],
+    }
 html_short_title = '%s-%s' % (project, version)
 
 napoleon_use_ivar = True
