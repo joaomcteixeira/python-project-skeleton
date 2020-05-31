@@ -2,6 +2,11 @@
 Changelog
 =========
 
+0.2.1 (2020-05-31)
+------------------
+
+* updated tox to accepts posargs in `pytest` and `flake8`
+
 0.2.0 (2020-01-31)
 ------------------
 
