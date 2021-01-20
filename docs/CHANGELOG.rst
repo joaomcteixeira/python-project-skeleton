@@ -5,6 +5,7 @@ Changelog
 new_version
 ------------------------------------------------------------
 
+* updated/enhanced bump2version configuration
 
 0.2.1 (2020-05-31)
 ------------------
