@@ -33,6 +33,10 @@ jobs:
       run: |
         echo "SKIPBUMP=FALSE" >> $GITHUB_ENV
 
+    - name: Create commit message
+    - run: |
+        echo ${{ github.event.head_commit.message }} >> $CMTMSG
+
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
@@ -47,7 +51,7 @@ jobs:
     # Default action
     - name: Bump Patch Version
       run: |
-        bump2version patch
+        bump2version --message '[SKIP] version bump {current_version} -> {new_version}\n\n{$CMTMSG}' patch
       if: env.SKIPBUMP == 'FALSE'
 
     # No major version change should go through automatically.
