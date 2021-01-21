@@ -1,0 +1,51 @@
+# taken from:
+# https://github.com/ymyzk/tox-gh-actions/tree/e11a29e2e5c73b6e48f5d4ee379f903476d013c0
+name: Python package
+
+on:
+  push:
+    branches: ["master"]
+  pull_request:
+    branches: ["master"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        platform: [ubuntu-latest, macos-latest, windows-latest]
+        python-version: [3.6, 3.7, 3.8]
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip setuptools wheel
+        pip install coverage[toml] virtualenv tox tox-gh-actions
+        # if you use tox-conda you can also add
+        # tox-conda to the above list of dependencies
+
+    - name: Test with tox
+      run: tox
+      #env:
+      #  PLATFORM: ${{ matrix.platform }}
+
+    # from https://github.com/hynek/structlog/blob/master/.github/workflows/main.yml
+    - name: "Combine coverage"
+      run: |
+        set -xe
+        python -m coverage combine
+        python -m coverage xml
+      if: "contains(env.USING_COVERAGE, matrix.python-version)"
+
+    - name: Upload coverage to Codecov
+      if: "contains(env.USING_COVERAGE, matrix.python-version)"
+      uses: "codecov/codecov-action@v1"
+      with:
+        fail_ci_if_error: true

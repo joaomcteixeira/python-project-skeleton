@@ -59,12 +59,13 @@ setup(
     project_urls={
         'webpage': 'https://github.com/joaomcteixeira/python-project-skeleton',
         'Documentation': 'https://python-project-skeleton.readthedocs.io/en/latest/',
-        'Changelog': 'https://github.com/joaomcteixeira/python-project-skeleton/blob/latest/docs/CHANGELOG.rst',
+        'Changelog': 'https://github.com/joaomcteixeira/python-project-skeleton/blob/master/docs/CHANGELOG.rst',
         'Issue Tracker': 'https://github.com/joaomcteixeira/python-project-skeleton/issues',
+        'Discussion Forum': 'https://github.com/joaomcteixeira/python-project-skeleton/discussions',
         },
     keywords=[
         'ci', 'continuous-integration', 'project-template',
-        'project-skeleton',
+        'project-skeleton', 'sample-project',
         # eg: 'keyword1', 'keyword2', 'keyword3',
         ],
     python_requires='>=3.6, <3.9',
