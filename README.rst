@@ -10,8 +10,8 @@ I intent to keep this repository up to date to my knowledge and needs. Your feed
 
 .. start-badges
 
-.. image:: https://github.com/joaomcteixeira/sampleproject/workflows/CI/badge.svg?branch=master
-   :target: https://github.com/hynek/structlog/actions?workflow=CI
+.. image:: https://github.com/joaomcteixeira/python-project-skeleton/workflows/CI/badge.svg?branch=master
+   :target: https://github.com/joaomcteixeira/python-project-skeleton/actions?workflow=CI
    :alt: CI Status
 
 .. image:: https://codecov.io/gh/joaomcteixeira/python-project-skeleton/branch/master/graph/badge.svg
