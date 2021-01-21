@@ -1,6 +1,6 @@
 # taken and upgraded from:
 # https://github.com/haddocking/pdb-tools/blob/f019d163d8f8cc5a0cba288e02f5a63a969719f6/.github/workflows/bump-version-on-push.yml
-name: Bump_and_Package
+name: VersionBump_and_Package
 
 on:
   push:
@@ -29,13 +29,11 @@ jobs:
         git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
         git checkout "${GITHUB_REF:11}"
 
-    - name: Create skip flag
+    - name: Setup env variables
       run: |
         echo "SKIPBUMP=FALSE" >> $GITHUB_ENV
-
-    - name: Create commit message
-    - run: |
-        echo ${{ github.event.head_commit.message }} >> $CMTMSG
+        # synchronizes with .bumpversion.cfg
+        export CMTMSG=${{ github.event.head_commit.message }}
 
     - name: Install dependencies
       run: |
@@ -51,7 +49,7 @@ jobs:
     # Default action
     - name: Bump Patch Version
       run: |
-        bump2version --message '[SKIP] version bump {current_version} -> {new_version}\n\n{$CMTMSG}' patch
+        bump2version patch
       if: env.SKIPBUMP == 'FALSE'
 
     # No major version change should go through automatically.
