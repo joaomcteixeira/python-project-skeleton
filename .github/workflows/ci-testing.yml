@@ -50,7 +50,7 @@ jobs:
       with:
         fail_ci_if_error: true
 
-    - name: Upload coverage to COVERALLS
-      uses: AndreMiras/coveralls-python-action@develop
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
+    #- name: Upload coverage to COVERALLS
+    #  uses: AndreMiras/coveralls-python-action@develop
+    #  with:
+    #    github-token: ${{ secrets.GITHUB_TOKEN }}
