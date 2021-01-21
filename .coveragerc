@@ -4,6 +4,7 @@ source =
     */site-packages
 
 [run]
+relative_files = true
 branch = true
 source =
     sampleproject

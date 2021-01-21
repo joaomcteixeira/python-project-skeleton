@@ -51,6 +51,6 @@ jobs:
         fail_ci_if_error: true
 
     - name: Upload coverage to COVERALLS
-      uses: coverallsapp/github-action@master
+      uses: AndreMiras/coveralls-python-action@develop
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
