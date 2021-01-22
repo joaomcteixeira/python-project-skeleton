@@ -30,12 +30,8 @@ jobs:
         git checkout "${GITHUB_REF:11}"
 
     - name: Setup env variables
-      env:
-        COMMIT_MSG: ${{ github.event.head_commit.message }}
       run: |
         echo "SKIPBUMP=FALSE" >> $GITHUB_ENV
-        # synchronizes with .bumpversion.cfg
-        echo "$COMMIT_MSG"
 
     - name: Install dependencies
       run: |
@@ -43,6 +39,8 @@ jobs:
         pip install bump2version setuptools wheel twine
 
     - name: Bump Minor Version
+      env:
+        COMMIT_MSG: ${{ github.event.head_commit.message }}
       run: |
         bump2version minor -n --verbose
         echo "SKIPBUMP=TRUE" >> $GITHUB_ENV
@@ -50,6 +48,8 @@ jobs:
 
     # Default action
     - name: Bump Patch Version
+      env:
+        COMMIT_MSG: ${{ github.event.head_commit.message }}
       run: |
         bump2version patch -n --verbose
       if: env.SKIPBUMP == 'FALSE'
