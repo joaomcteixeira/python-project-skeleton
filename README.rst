@@ -2,78 +2,84 @@
 Python Package Skeleton Template
 ================================
 
-.. image:: https://github.com/joaomcteixeira/python-project-skeleton/workflows/CI/badge.svg?branch=master
-    :target: https://github.com/joaomcteixeira/python-project-skeleton/actions?workflow=CI
-    :alt: CI Status
+.. image:: https://github.com/joaomcteixeira/python-project-skeleton/workflows/Tests/badge.svg?branch=master
+    :target: https://github.com/joaomcteixeira/python-project-skeleton/actions?workflow=Tests
+    :alt: Test Status
+
+.. image:: https://github.com/joaomcteixeira/python-project-skeleton/workflows/Package%20Build/badge.svg?branch=master
+    :target: https://github.com/joaomcteixeira/python-project-skeleton/actions?workflow=Package%20Build
+    :alt: Package Build
 
 .. image:: https://codecov.io/gh/joaomcteixeira/python-project-skeleton/branch/master/graph/badge.svg
     :target: https://codecov.io/gh/joaomcteixeira/python-project-skeleton
-    :alt: Codecov master branch
+    :alt: Codecov
 
 .. image:: https://img.shields.io/codacy/grade/ae042ac066554bfab398024b0beea6a5/master?label=Codacy
     :target: https://app.codacy.com/manual/joaomcteixeira/python-project-skeleton/dashboard
-    :alt: Codacy master branch
+    :alt: Codacy
 
 .. image:: https://api.codeclimate.com/v1/badges/d96cc9a1841a819cd4f5/maintainability
-    :target: https://codeclimate.com/github/joaomcteixeira/python-project-skeleton
-    :alt: Code Climate
+   :target: https://codeclimate.com/github/joaomcteixeira/python-project-skeleton/maintainability
+   :alt: Maintainability
 
-.. image:: https://img.shields.io/codeclimate/tech-debt/joaomcteixeira/python-project-skeleton?label=Code%20Climate%20tech%20debt
+.. image:: https://img.shields.io/codeclimate/tech-debt/joaomcteixeira/python-project-skeleton
     :target: https://codeclimate.com/github/joaomcteixeira/python-project-skeleton
     :alt: Code Climate technical debt
 
-.. image:: https://img.shields.io/readthedocs/python-project-skeleton/stable?label=Read%20the%20Docs
+.. image:: https://img.shields.io/readthedocs/python-project-skeleton/latest?label=Read%20the%20Docs
     :target: https://python-project-skeleton.readthedocs.io/en/latest/index.html
     :alt: Read the Docs
 
 Summary
 =======
 
-This is a **project skeleton template** for a **Python project/library**. This repository implements and explains the latest practices in team software development and deployment within a continuous integration framework. **Note** that is impossible for me to cover all strategies available in the wild. This repository covers the needs of my Python projects, which include:
+This repository is a **skeleton template** for a **Python application/library** compliant with the latest team-development and software deployment practices within a continuous integration (CI) framework. It can be used as a source of information/study to emulate or as a direct template for your repositories. **Note** I can't cover all strategies available in the wild. This repository reflects the setup I like the most and covers the CI needs of my Python projects, which includes:
 
-* a robust Python library/application file hierarchy with packages, modules, clients
+* A robust Python library/application file hierarchy with packages, modules, clients, and documentation:
     * detailed, yet simple, ``setup.py``
-    * the special use of the ``src`` directory
+    * retrievable ``README`` and ``CHANGELOG``
+    * documentation deployed in `ReadTheDocs`_
+    * the unusual adoption of the ``src`` directory layer (love it)
+    * examples of packages and modules hierarchy
     * examples of Python command-line interfaces
-* unique testing framework for developers with `tox`_ and `pytest`_
-    * assures tests are reproducible across developers platforms
-    * assures same lint rules are always applied
-    * assures all desired Python versions are covered
-* continuous integration with `GitHub Actions`_
+* A unique testing framework for developers with `tox`_ and `pytest`_
+    * guarantees tests are reproducible for all developers
+    * ensures same lint rules are always applied (local and remotely)
+    * ensures all desired Python versions are covered
+    * adopts `hypothesis`_
+* Fully automated continuous integration services with `GitHub Actions`_
     * automatic testing on Linux, MacOS, and Windows
-    * automatic testing upon deployment with tox
+    * automatic testing simulated upon deployment with ``tox``
     * test coverage report to `Codecov`_
-    * automatic version bump with `bump2version`_
-    * automatic git tagging and Python packaging to `PyPI`_
+    * automated version bump with `bump2version`_, git tagging, and Python packaging to PyPI on Pull Request merge
 
 Motivation
 ==========
 
-To understand and implement in the best practices in software development and deployment for scientific software. Actually, I believe the strategy reviewed here can be applied to most Python library projects.
+To understand and implement the best practices for team-based development and automatic deployment of scientific software in Python. Also, I believe the strategy reviewed here can be applied to most general-purpose Python libraries.
 
-This repository does **not** intent to be a `cookiecutter`_-like repository. Though there are many and very well documented cookiecutter templates out there, `even for scientific software`_, when I initiated my adventure in developing Python libraries I decided that using a cookiecutter would lead me to nowhere because I would miss what was actually being automatized. Hence, assembling this *template* repository from scratch was the only and best approach to achieve a minimum understanding of the best practices and protocols on the matter. Now, this repository serves as a reference guide for all my projects and I try to keep it up to date to my needs and changes in the CI ecosystem.
+This repository does **not** intend to be a `cookiecutter`_-like repository. There are very well documented cookiecutters, `even for scientific software`_, if you are looking for one of those.
+
+When I started developing Python libraries, I decided that using a cookiecutter as a shortcut would lead me nowhere in the learning process of configuring CI services because I would miss the details of what was actually being implemented. Hence, assembling this *template* from scratch as a full working repository was the only best approach to achieve a minimum understanding of CI. Now, this repository serves as a reference guide for all my projects and hopefully will serve you too. I try to keep it up to date with my needs and the ever-evolving CI ecosystem.
 
 Acknowledgments
 ===============
 
-The Python library organization itself was strongly influenced by `ionel`_ discussions in his `blog post`_ about *Packaging a python library*. I really recommend reading through that post and the related posts in his blog.
+I want to acknowledge `ionel`_ discussions about *Packaging a python library*. They are a pillar in my understanding and decisions on this matter, and I really recommend reading his `blog post`_ and references herein.
 
-I setup the CI pipeline with bits from many places. Kudos to `python-nameless`_ and `cookiecutter-pylibrary`_ two repositories that served as main source of information for the *python-project-skeleton* repository, specially in the first versions with Travis and Appveyor.
+I configured the CI pipeline to my needs by taking bits and pieces from many places. Kudos to `python-nameless`_ and `cookiecutter-pylibrary`_; two primary sources of information for the *python-project-skeleton* repository, especially in the first versions using Travis and Appveyor. When migrating to GitHub Actions, I fed on the workflows `@JoaoRodrigues`_ assembled for `pdb-tools`_; on the `tox-gh-actions`_ package; and on `structlog`_, which was also a repository I used as a reference to build test latest version here.
 
-When migrating to GitHub Actions, I want to thank @JoaoRodrigues for the workflows in `pdb-tools`_, ``ymyzk`` for the `tox-gh-actions`_ package, and `structlog`_, which was also a repository I used as a reference to build test latest version here.
-
-I reference other important sources of information as comments in the specific files. Thanks everyone for keeping discussions out there open.
+I refer to other important sources of information as comments in the specific files. Thanks, everyone, for keeping discussions out there open.
 
 How to use this repository
 ==========================
 
-The repository simulates the implementation of a :code:`sampleproject`. Here, ``sampleproject`` is the Python name of your project, that which will be `import sampleproject`. So everywhere you find ``sampleproject`` just replace with the name of your project.
+The `documentation`_ pages explain how to use this template for your projects and the implementation details adopted here. Use the documentation as a reference to learn the rationale behind this repository and also as a demonstration of how to deploy documentation in ReadTheDocs.
 
-In ``setup.py`` the project has the name ``jmct-sampleproject`` because ``sampleprojet`` was already in use in `test.pypi.org`_, as expected. Substitute that by the name of you package. Normally, it as the same name as ``sampleproject``.
+Issues and Discussions
+======================
 
-You will find in the `project's documentation`_ all references that motivated the current configuration as well as detailed explanation on the different configuration files.
-
-I intent to keep this repository up to date to my knowledge and needs. Your feedback and suggestions are highly appreciated, please raise an `issue`_ and share your thoughts.
+As usual in any GitHub based project, raise an `issue`_ if you find any bug or room for improvement (certainly there are many), or open a `discussion`_ (new feature!!) if you want to discuss or talk :-)
 
 Version
 =======
@@ -100,3 +106,5 @@ v0.3.1
 .. _tox-gh-actions: https://github.com/ymyzk/tox-gh-actions
 .. _pdb-tools: https://github.com/haddocking/pdb-tools
 .. _test.pypi.org: https://test.pypi.org
+.. _@JoaoRodriges: https://github.com/JoaoRodrigues
+.. _hypothesis: https://hypothesis.readthedocs.io/en/latest/
