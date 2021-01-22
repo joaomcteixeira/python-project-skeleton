@@ -1,10 +1,13 @@
+
 Changelog
 =========
 
-new_version
+* new passing feature
+
+v0.3.1 (2021-01-22)
 ------------------------------------------------------------
 
-* this PR should pass the CI
+* Synchronized CHANGELOG with ``.bumpversion``
 
 v0.3.0 (2021-01-22)
 ------------------------------------------------------------

@@ -78,7 +78,7 @@ I intent to keep this repository up to date to my knowledge and needs. Your feed
 Version
 =======
 
-v0.3.0
+v0.3.1
 
 .. _project's documentation: https://python-project-skeleton.readthedocs.io/en/latest/index.html
 .. _issue: https://github.com/joaomcteixeira/python-project-skeleton/issues
