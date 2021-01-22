@@ -25,20 +25,20 @@ jobs:
       with:
         python-version: '3.x'
 
-    #- name: Setup Git
-    #  run: |
-    #    git config user.name "joaomcteixeira"
-    #    git config user.email 'joaomcteixeira@users.noreply.github.com'
-    #    git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
-    #    git checkout "${GITHUB_REF:11}"
+    - name: Setup Git
+      run: |
+        git config user.name "joaomcteixeira"
+        git config user.email 'joaomcteixeira@users.noreply.github.com'
+        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
+        git checkout "${GITHUB_REF:11}"
 
     - name: Setup env variables
+      env:
+        COMMIT_MSG: ${{ github.event.head_commit.message }}
       run: |
-        echo ::set-env name=commitmsg::$(git log --format=%B -n 1 ${{ github.event.after }})
         echo "SKIPBUMP=FALSE" >> $GITHUB_ENV
         # synchronizes with .bumpversion.cfg
-        #export CMTMSG="github.event.head_commit.message"
-        echo $commitmsg
+        echo "$COMMIT_MSG"
 
     - name: Install dependencies
       run: |
