@@ -10,7 +10,12 @@ next_version
 0.2.2 (2021-01-22)
 ------------------------------------------------------------
 
+* Updates CI framework to GitHub Actions
+* adds action to automate version bump and package build to PyPI
+* completes CI for Linux, Windows, and MacOS
+* reports test coverage to Codecov
 * updated/enhanced bump2version configuration
+* bump2version also changes CHANGELOG
 
 0.2.1 (2020-05-31)
 ------------------
