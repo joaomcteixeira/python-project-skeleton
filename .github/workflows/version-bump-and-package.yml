@@ -62,13 +62,12 @@ jobs:
       env:
         COMMIT_MSG: ${{ github.event.head_commit.message }}
       run: |
-        bump2version patch -n --verbose
+        bump2version patch
       if: env.SKIPBUMP == 'FALSE'
 
-    #- name: Commit version change to master
-    #  with:
-    #  run: |
-    #    git push --follow-tags
+    - name: Commit version change to master
+      run: |
+        git push --follow-tags
 
     #- name: Build and publish
     #  env:
