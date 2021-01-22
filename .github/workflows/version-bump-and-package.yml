@@ -16,12 +16,13 @@ jobs:
     steps:
 
     - uses: actions/checkout@v2
+      with:
+        repo-token: ${{ secrets.AC_GITHUB_TOKEN }}
 
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
         python-version: '3.x'
-        repo-token: ${{ secrets.AC_GITHUB_TOKEN }}
 
 
     #- name: Setup Git
@@ -58,7 +59,7 @@ jobs:
     # Default action
     - name: Bump Patch Version
       run: |
-        bump2version patch -n
+        bump2version patch -n --verbose
       if: env.SKIPBUMP == 'FALSE'
 
     #- name: Commit version change to master
