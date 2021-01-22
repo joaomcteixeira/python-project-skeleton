@@ -3,7 +3,7 @@
 """Setup dot py."""
 from __future__ import absolute_import, print_function
 
-import re
+# import re
 from glob import glob
 from os.path import basename, dirname, join, splitext
 
@@ -17,15 +17,21 @@ def read(*names, **kwargs):
         return fh.read()
 
 
+# previous approach used to ignored badges in PyPI long description
+# long_description = '{}\n{}'.format(
+#     re.compile(
+#         '^.. start-badges.*^.. end-badges',
+#         re.M | re.S,
+#         ).sub(
+#             '',
+#             read('README.rst'),
+#             ),
+#     re.sub(':[a-z]+:`~?(.*?)`', r'``\1``', read(join('docs', 'CHANGELOG.rst')))
+#     )
+
 long_description = '{}\n{}'.format(
-    re.compile(
-        '^.. start-badges.*^.. end-badges',
-        re.M | re.S,
-        ).sub(
-            '',
-            read('README.rst'),
-            ),
-    re.sub(':[a-z]+:`~?(.*?)`', r'``\1``', read(join('docs', 'CHANGELOG.rst')))
+    read('README.rst'),
+    read(join('docs', 'CHANGELOG.rst')),
     )
 
 setup(

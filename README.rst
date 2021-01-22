@@ -2,33 +2,29 @@
 Python Package Skeleton Template
 ================================
 
-.. start-badges
-
 .. image:: https://github.com/joaomcteixeira/python-project-skeleton/workflows/CI/badge.svg?branch=master
-:target: https://github.com/joaomcteixeira/python-project-skeleton/actions?workflow=CI
-:alt: CI Status
+    :target: https://github.com/joaomcteixeira/python-project-skeleton/actions?workflow=CI
+    :alt: CI Status
 
 .. image:: https://codecov.io/gh/joaomcteixeira/python-project-skeleton/branch/master/graph/badge.svg
-:target: https://codecov.io/gh/joaomcteixeira/python-project-skeleton
-:alt: Codecov master branch
+    :target: https://codecov.io/gh/joaomcteixeira/python-project-skeleton
+    :alt: Codecov master branch
 
 .. image:: https://img.shields.io/codacy/grade/ae042ac066554bfab398024b0beea6a5/master?label=Codacy
-:target: https://app.codacy.com/manual/joaomcteixeira/python-project-skeleton/dashboard
-:alt: Codacy master branch
+    :target: https://app.codacy.com/manual/joaomcteixeira/python-project-skeleton/dashboard
+    :alt: Codacy master branch
 
 .. image:: https://api.codeclimate.com/v1/badges/d96cc9a1841a819cd4f5/maintainability
-:target: https://codeclimate.com/github/joaomcteixeira/python-project-skeleton
-:alt: Code Climate
+    :target: https://codeclimate.com/github/joaomcteixeira/python-project-skeleton
+    :alt: Code Climate
 
 .. image:: https://img.shields.io/codeclimate/tech-debt/joaomcteixeira/python-project-skeleton?label=Code%20Climate%20tech%20debt
-:target: https://codeclimate.com/github/joaomcteixeira/python-project-skeleton
-:alt: Code Climate technical debt
+    :target: https://codeclimate.com/github/joaomcteixeira/python-project-skeleton
+    :alt: Code Climate technical debt
 
 .. image:: https://img.shields.io/readthedocs/python-project-skeleton/stable?label=Read%20the%20Docs
-:target: https://python-project-skeleton.readthedocs.io/en/latest/index.html
-:alt: Read the Docs
-
-.. end-badges
+    :target: https://python-project-skeleton.readthedocs.io/en/latest/index.html
+    :alt: Read the Docs
 
 Summary
 =======
@@ -64,7 +60,7 @@ The Python library organization itself was strongly influenced by `ionel`_ discu
 
 I setup the CI pipeline with bits from many places. Kudos to `python-nameless`_ and `cookiecutter-pylibrary`_ two repositories that served as main source of information for the *python-project-skeleton* repository, specially in the first versions with Travis and Appveyor.
 
-When migrating to GitHub Actions, I want to thank `Joao Rodrigues`_ for the workflows in `pdb-tools`_, ``ymyzk`` for the `tox-gh-actions`_ package, and `structlog`_, which was also a repository I used as a reference to build test latest version here.
+When migrating to GitHub Actions, I want to thank @JoaoRodrigues for the workflows in `pdb-tools`_, ``ymyzk`` for the `tox-gh-actions`_ package, and `structlog`_, which was also a repository I used as a reference to build test latest version here.
 
 I reference other important sources of information as comments in the specific files. Thanks everyone for keeping discussions out there open.
 
@@ -103,5 +99,4 @@ v0.2.2
 .. _structlog: https://github.com/hynek/structlog
 .. _tox-gh-actions: https://github.com/ymyzk/tox-gh-actions
 .. _pdb-tools: https://github.com/haddocking/pdb-tools
-.. _Joao Rodriges: https://github.com/JoaoRodrigues
 .. _test.pypi.org: https://test.pypi.org
