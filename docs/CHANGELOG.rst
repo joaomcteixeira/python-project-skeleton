@@ -5,7 +5,12 @@ Changelog
 new_version
 ------------------------------------------------------------
 
+* Updates CI framework to GitHub Actions
+* adds action to automate version bump and package build to PyPI
+* completes CI for Linux, Windows, and MacOS
+* reports test coverage to Codecov
 * updated/enhanced bump2version configuration
+* bump2version also changes CHANGELOG
 
 0.2.1 (2020-05-31)
 ------------------
