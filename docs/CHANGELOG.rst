@@ -2,6 +2,8 @@
 Changelog
 =========
 
+* Synchronized CHANGELOG with ``.bumpversion``
+
 v0.3.0 (2021-01-22)
 ------------------------------------------------------------
 
