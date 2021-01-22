@@ -1,13 +1,14 @@
-
 Changelog
 =========
 
-
-next_version
+new_version
 ------------------------------------------------------------
 
+* simplifies ``setup.py``
+* defines rules for ``CHANGELOG.rst``
+* adds ``check`` ``tox`` env to py37 machine
 
-0.2.2 (2021-01-22)
+v0.2.2 (2021-01-22)
 ------------------------------------------------------------
 
 * Updates CI framework to GitHub Actions
@@ -17,13 +18,13 @@ next_version
 * updated/enhanced bump2version configuration
 * bump2version also changes CHANGELOG
 
-0.2.1 (2020-05-31)
-------------------
+v0.2.1 (2020-05-31)
+-------------------
 
 * updated tox to accepts posargs in `pytest` and `flake8`
 
-0.2.0 (2020-01-31)
-------------------
+v0.2.0 (2020-01-31)
+-------------------
 
 * Implemented Travis-CI for Windows, MacOSX and Linux
   * for Python: 3.6, 3.7 and 3.8
@@ -33,7 +34,7 @@ next_version
 * Implemented mock strategy to avoid installing dependencies for documentation generation.
   * TOXENV docs
 
-0.1.0 (2019-10-03)
-------------------
+v0.1.0 (2019-10-03)
+-------------------
 
 * First release on PyPI.
