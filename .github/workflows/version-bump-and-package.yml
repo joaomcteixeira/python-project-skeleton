@@ -6,6 +6,9 @@ on:
   push:
     branches:
       - master
+  pull_request:
+    branches:
+      - master
 
 jobs:
   bump-version:
@@ -33,7 +36,8 @@ jobs:
       run: |
         echo "SKIPBUMP=FALSE" >> $GITHUB_ENV
         # synchronizes with .bumpversion.cfg
-        export CMTMSG=${{ github.event.head_commit.message }}
+        export CMTMSG="github.event.head_commit.message"
+        echo $CMTMSG
 
     - name: Install dependencies
       run: |
@@ -42,27 +46,27 @@ jobs:
 
     - name: Bump Minor Version
       run: |
-        bump2version minor
+        bump2version minor -n
         echo "SKIPBUMP=TRUE" >> $GITHUB_ENV
       if: "startsWith(github.event.head_commit.message, '[FEATURE]')"
 
     # Default action
     - name: Bump Patch Version
       run: |
-        bump2version patch
+        bump2version patch -n
       if: env.SKIPBUMP == 'FALSE'
 
     # No major version change should go through automatically.
 
-    - name: Commit version change to master
-      run: |
-        git push --follow-tags
+    #- name: Commit version change to master
+    #  run: |
+    #    git push --follow-tags
 
-    - name: Build and publish
-      env:
-        TWINE_USERNAME: ${{ secrets.PYPI_USER }}
-        TWINE_PASSWORD: ${{ secrets.PYPI_PASS }}
-      run: |
-        python setup.py sdist bdist_wheel
-        twine upload dist/*
+    #- name: Build and publish
+    #  env:
+    #    TWINE_USERNAME: ${{ secrets.PYPI_USER }}
+    #    TWINE_PASSWORD: ${{ secrets.PYPI_PASS }}
+    #  run: |
+    #    python setup.py sdist bdist_wheel
+    #    twine upload dist/*
 
