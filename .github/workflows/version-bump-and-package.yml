@@ -83,4 +83,7 @@ jobs:
         TWINE_PASSWORD: ${{ secrets.PYPI_PASS }}
       run: |
         python setup.py sdist bdist_wheel
-        twine upload dist/*
+        # note that here testpypi is used instead of the main pypi
+        # because this is a test project
+        # read more at: https://packaging.python.org/tutorials/packaging-projects/
+        twine upload --repository testpypi dist/*
