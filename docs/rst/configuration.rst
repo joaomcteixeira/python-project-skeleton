@@ -1,9 +1,7 @@
-Repository Configuration
-========================
+Template Configuration
+======================
 
-This page explains how this template repository is organized by detailing the building blocks of the project skeleton.
-
-.. include:: i_branch_organization.rst
+I will explain how the continuous integration is configured and, consequently, how you can configure those same services for you repository.
 
 .. include:: i_project_layout.rst
 

@@ -1,17 +1,29 @@
 Contributing
 ============
 
-Here we explain how to contribute to a project that adopted this template. Actually, you can use this same scheme when contributing to this template.
+How to contribute to this project.
 
 Fork this repository
 --------------------
 
-`Fork this repository before contributing`_. It is a better practice, possibly even enforced, that only Pull Request from forks are accepted. In my opinion this creates a cleaner representation of the whole `contributions to the project`_.
+`Fork this repository before contributing`_. It is a better practice, possibly even enforced, that only Pull Request from forks are accepted - consider a case where there are several main maintainers. In my opinion enforcing forks creates a cleaner representation of the `contributions to the project`_.
+
+Clone your fork
+~~~~~~~~~~~~~~~
+
+Next, clone your fork to your local machine, keep it `up to date with the upstream`_, and update the online fork with those updates.
+
+::
+
+    git clone https://github.com/YOUR-USERNAME/python-project-skeleton.git
+    cd python-project-skeleton
+    git remote add upstream git://github.com/joaomcteixeira/python-project-skeleton.git
+    git fetch upstream
+    git merge upstream/master
+    git pull origin master
 
 Install for developers
 ----------------------
-
-First, clone the repository as described in the :ref:`section above<Fork this repository>`.
 
 Create a dedicated Python environment where to develop the project.
 
@@ -31,136 +43,65 @@ If you are using `Anaconda`_ go for:
 
 Where :code:`pyprojskel` is the name you wish to give to the environment dedicated to this project.
 
-Either under *pip* or *conda*, install the package in :code:`develop` mode, and also :ref:`tox<Uniformed Tests>`.
+Either under *pip* or *conda*, install the package in :code:`develop` mode, and also :ref:`tox<Uniformed Tests with tox>`. **Note**, here I assume our project has **no** dependencies.
 
 ::
 
     python setup.py develop
-    # for pip
-    pip install tox bumpversion
-    # for conda
-    conda install tox bumpversion -c conda-forge
+    pip install tox
 
-Under this configuration the source you edit in the repository git folder is automatically reflected in the development installation.
+This configuration, together with the use of the ``src`` folder layer, guarantee that you will always run the code after installation. Also, thanks to the ``develop`` flag, any changes in the code will be automatically reflected in the installed version.
 
-Continue your implementation following the development guidelines described bellow.
+Make a new branch
+-----------------
 
-Branch workflow
----------------
-
-*The following applies to external contributors, yet main developers can also follow these guidelines.*
-
-Branch workflow for development and contribution should follow the `Gitflow Workflow`_ guidelines. Please read careful through that guide. Here we highlight the general approach with some tasteful additions such as the ``--no-ff`` flag.
-
-Clone your fork
-~~~~~~~~~~~~~~~
-
-Indeed the first thing to do is to clone your fork, and keep it `up to date with the upstream`_:
+From the ``master`` branch create a new branch where to develop the new code.
 
 ::
 
-    git clone https://github.com/YOUR-USERNAME/python-project-skeleton.git
-    cd into/cloned/fork-repo
-    git remote add upstream git://github.com/joaomcteixeira/python-project-skeleton.git
-    git fetch upstream
-    git pull upstream latest
+    git checkout master
+    git checkout -b new_branch
 
-New feature
-~~~~~~~~~~~
-
-To work on a new feature, branch out from the ``latest`` branch:
-
-::
-    
-    git checkout latest
-    git checkout -b feature_branch
 
 Develop the feature and keep regular pushes to your fork with comprehensible commit messages.
 
-Push to latest
-~~~~~~~~~~~~~~
-
-To see your development accepted in the main project, you should create a `Pull Request`_ to the ``latest`` branch following the `PULLREQUEST.rst`_ guidelines.
-
-**Before submitting a Pull Request, verify your development branch passes all tests as** :ref:`described bellow<Uniformed Tests>` **. If you are developing new code you should also implement new test cases.**
-
-If you are an official contributor to this repository, have write permissions, and are sure the new feature branch passes tests, directly merge to the ``latest`` branch.
-
-You should :ref:`bump a patch<Bumpversion>` beforehand.
-
-::
-    
-    # on your feature_branch
-    bumpversion patch --no-tag
-    git push origin feature_branch
-    git checkout latest
-    git merge --no-ff feature_branch
-    git push origin latest
-
-The ``--no-ff`` option avoids ``Fastforward`` merging (`1`_, `2`_), keeping a record of the branching out/in history.
-
-To official contributors
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-Release Branches
-````````````````
-
-Create a short lived branch to prepare for the release candidate, in this example ``release/0.1.0``.
-
-::
-    
-    git checkout latest
-    git checkout -b release/0.1.0
-
-Fix the final bugs, docs and minor corrections, and finally :ref:`bump the version<Bumpversion>`.
-
-::
-    
-    # first commit and push your changes
-    # then bump
-    bumpversion patch|minor|major
-    git push origin release/0.1.0
-
-Finally, merge to ``master`` AND from ``master`` to ``latest``.
-
-::
-    
-    git checkout master
-    git merge --no-ff release/0.1.0
-    git push origin master --tags
-    git checkout latest
-    git merge --no-ff master
-
-Hotfixes from master
-````````````````````
-
-The hotfix strategy is applied when a bug is identified in the production version that can be easily fixed.
-
-::
-    
-    git checkout master
-    git checkout -b hotfix_branch
-
-Work on the fix...
-
 ::
 
-    # push yours commits to GitHub beforehand
-    git push origin hotfix_branch  
-    bumpversion patch
-    git push origin hotfix_branch --tags
-    git checkout master
-    git merge --no-ff hotfix_branch
-    git push origin master
-    git checkout latest
-    git merge --no-ff master 
-    git push origin latest
+    git status
+    git add (the files you want)
+    git commit (add a nice commit message)
+    git push origin new_branch
+
+While you are developing, you can execute ``tox`` as needed to run your unittests or inspect lint, etc. See the last section of this page.
+
+Update CHANGELOG
+~~~~~~~~~~~~~~~~
+
+Update the changelog file under :code:`docs/CHANGELOG.rst` with an explanatory bullet list of your contribution. Add that list right before the title and above the last version subtitle::
+
+    Changelog
+    =========
+
+    * here goes my new additions
+    * explain them shortly and well
+
+    vX.X.X (1900-01-01)
+    -------------------
+
+Also add your name to the authors list at :code:`docs/AUTHORS.rst`.
+
+Pull Request
+~~~~~~~~~~~~
+
+Once you are finished, you can Pull Request you additions to the main repository, and engage with the community. Please read the ``PULLREQUEST.rst`` guidelines first, you will see them when you open a PR.
+
+**Before submitting a Pull Request, verify your development branch passes all tests as** :ref:`described bellow<Uniformed Tests with tox>` **. If you are developing new code you should also implement new test cases.**
 
 
-Uniformed Tests
----------------
+Uniformed Tests with tox
+------------------------
 
-Thanks to `Tox`_ we can have a uniform testing platform where all developers are forced to follow the same rules and, above all, all tests occur in a controlled Python environment.
+Thanks to `Tox`_ we can have a unified testing platform where all developers are forced to follow the same rules and, above all, all tests occur in a controlled Python environment.
 
 With *Tox*, the testing setup can be defined in a configuration file, the `tox.ini`_, which contains all the operations that are performed during the test phase. Therefore, to run the unified test suite, developers just need to execute ``tox``, provided `tox is installed`_ in the Python environment in use.
 
@@ -170,39 +111,25 @@ With *Tox*, the testing setup can be defined in a configuration file, the `tox.i
     # or
     conda install tox -c conda-forge
 
-.. TODO::
 
-    Review and consider integrating using tox to setup development envs -> https://tox.readthedocs.io/en/latest/example/devenv.html
-
-
-One of the greatest advantages of using Tox together with the :ref:`src layout<The src layout>`, aside from uniforming the testing routines across developers, is that tests scripts actually perform against an installed source (our package) inside an isolated deployment environment. In order words, tests are performed in an environment simulating a post-deployment state instead of a pre-deploy/development environment. Under this setup, there is no need, in general cases, to deploy test scripts along with the actual source, in my honest opinion - see `MANIFEST.in`_.
-
-.. TODO::
-
-    Discuss the need to deploy test scripts.
-
+One of the greatest advantages of using Tox together with the :ref:`src layout<The src layout>` is that unittest actually perform on the installed source (our package) inside an isolated deployment environment. In order words, tests are performed in an environment simulating a post-installation state instead of a pre-deploy/development environment. Under this setup, there is no need, in general cases, to distribute test scripts along with the actual source, in my honest opinion - see `MANIFEST.in`_.
 
 Before creating a Pull Request from your branch, certify that all the tests pass correctly by running:
 
 ::
-    
+
     tox
 
-These are exactly the same tests that will be performed in the :ref:`CI platforms`.
+These are exactly the same tests that will be performed online in the Github Actions.
 
 Also, you can run individual environments if you wish to test only specific functionalities, for example:
 
 ::
-    
+
     tox -e check  # code style and file compatibility
     tox -e spell  # spell checks documentation
     tox -e docs  # only builds the documentation
-
-Bumpversion
------------
-
-I found two main version string handlers around: `bumpversion`_ and `versioneer`_.
-I chose *bumpversion* for this repository template. Why? I have no argument against *versioneer* or others, simply I found `bumpversion`_ to be so simple, effective and configurable that I could only adopt it. Congratulations to both projects nonetheless.
+    tox -e py37
 
 
 .. _tox.ini: https://github.com/joaomcteixeira/python-project-skeleton/blob/latest/tox.ini
@@ -217,7 +144,5 @@ I chose *bumpversion* for this repository template. Why? I have no argument agai
 .. _PULLREQUEST.rst: https://github.com/joaomcteixeira/python-project-skeleton/blob/latest/docs/PULLREQUEST.rst
 .. _1: https://git-scm.com/docs/git-merge#Documentation/git-merge.txt---no-ff
 .. _2: https://stackoverflow.com/questions/9069061/what-is-the-difference-between-git-merge-and-git-merge-no-ff
-.. _bumpversion: https://pypi.org/project/bumpversion/
-.. _versioneer: https://github.com/warner/python-versioneer
 .. _Installing packages using pip and virtual environments: https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment
 .. _Anaconda: https://www.anaconda.com/

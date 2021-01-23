@@ -2,6 +2,9 @@
 Changelog
 =========
 
+* Updates documentation to the new Github Actions integration
+* Updates documentation in general
+
 v0.3.1 (2021-01-22)
 ------------------------------------------------------------
 

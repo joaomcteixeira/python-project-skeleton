@@ -1,14 +1,10 @@
 Badges
 ------
 
-Badges point to the current status of the different Continuous Integration tools, for example, Travis-CI or Appveyor, but also documentation and code quality reports.
+Badges point to the current status of the different Continuous Integration tools in the ``master`` branch. You can also configure badges to report on other branches, though. Are tests passing? Is the package building properly? Is documentation building properly? What is the quality of the code? Red lights mean something is wrong and you should attend it shortly!
 
-This project has two badge groups, one for the master (stable) branch and other for the latest (develop) branch. By showing information for these two groups the development team can keep track on the improvements (or losses) on code quality or the success of the different building processes.
+Each platform provide their own badges, and you can modify and emulate the badge strategy in the ``README.rst`` file. Yet, you can further tune the badges style by creating your own personalized badge with `Shields.io`_.
 
-Each platform provide their own badges, yet you can further tune the badges style by creating your own personalized badge with `Shields.io`_.
-
-You will notice that the badge for Code Climate is missing in the master branch. I could not find yet a straightforward and easy implementation for several branches at Code Climate, so, the badge reports on the main branch set for the repository, in this case the *latest* branch. Also at `Shields.io` there is no shortcut to *branch* for this platform as there is for others.
-
-I observed this same issue for COVERALLS, but then I realize that after the first commit to the master, COVERALLS actually displays nicely the information for both branches.
+You have noticed already that there is no badge for PyPI. That is because "python-project-skeleton" is deployed at ``test.pypi.org``. You will find also at Shields.io how to add the PyPI badge.
 
 .. _Shields.io: https://shields.io/
