@@ -10,3 +10,5 @@ I will explain how the continuous integration is configured and, consequently, h
 .. include:: i_readthedocs.rst
 
 .. include:: i_badges.rst
+
+.. include:: i_configuration_files.rst
