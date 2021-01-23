@@ -68,7 +68,7 @@ linkcheck_ignore = [
 html_theme = "sphinx_py3doc_enhanced_theme"
 html_theme_path = [sphinx_py3doc_enhanced_theme.get_html_theme_path()]
 html_theme_options = {
-    'githuburl': 'https://github.com/PythonPackageDistributionExample/sampleproject',  # noqa: E501
+    'githuburl': 'https://github.com/joaomcteixeira/python-project-skeleton',
     }
 
 html_use_smartypants = True

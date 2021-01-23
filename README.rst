@@ -50,7 +50,7 @@ This repository is a **skeleton template** for a **Python application/library** 
 * Fully automated continuous integration services with `GitHub Actions`_
     * automatic testing on Linux, MacOS, and Windows
     * automatic testing simulated upon deployment with ``tox``
-    * test coverage report to `Codecov`_
+    * test coverage report to Codecov
     * automated version bump with `bump2version`_, git tagging, and Python packaging to PyPI on Pull Request merge
 
 Motivation
@@ -67,7 +67,7 @@ Acknowledgments
 
 I want to acknowledge `ionel`_ discussions about *Packaging a python library*. They are a pillar in my understanding and decisions on this matter, and I really recommend reading his `blog post`_ and references herein.
 
-I configured the CI pipeline to my needs by taking bits and pieces from many places. Kudos to `python-nameless`_ and `cookiecutter-pylibrary`_; two primary sources of information for the *python-project-skeleton* repository, especially in the first versions using Travis and Appveyor. When migrating to GitHub Actions, I fed on the workflows `@JoaoRodrigues`_ assembled for `pdb-tools`_; on the `tox-gh-actions`_ package; and on `structlog`_, which was also a repository I used as a reference to build test latest version here.
+I configured the CI pipeline to my needs by taking bits and pieces from many places. Kudos to `python-nameless`_ and `cookiecutter-pylibrary`_; two primary sources of information for the *python-project-skeleton* repository, especially in the first versions using Travis and Appveyor. When migrating to GitHub Actions, I fed on the workflows `@JoaoRodrigues <https://python-project-skeleton.readthedocs.io/>`_ assembled for `pdb-tools`_; on the `tox-gh-actions`_ package; and on `structlog`_, which was also a repository I used as a reference to build test latest version here.
 
 I refer to other important sources of information as comments in the specific files. Thanks, everyone, for keeping discussions out there open.
 
@@ -86,25 +86,26 @@ Version
 
 v0.3.1
 
-.. _project's documentation: https://python-project-skeleton.readthedocs.io/en/latest/index.html
-.. _issue: https://github.com/joaomcteixeira/python-project-skeleton/issues
-.. _master branch: https://github.com/joaomcteixeira/python-project-skeleton/tree/master
-.. _latest branch: https://github.com/joaomcteixeira/python-project-skeleton/tree/latest
-.. _python-nameless: https://github.com/ionelmc/python-nameless
-.. _cookiecutter-pylibrary: https://github.com/ionelmc/cookiecutter-pylibrary
-.. _even for scientific software: https://github.com/MolSSI/cookiecutter-cms
-.. _cookiecutter: https://cookiecutter.readthedocs.io/en/latest/index.html
-.. _ionel: https://github.com/ionelmc
-.. _blog post: https://blog.ionelmc.ro/2014/05/25/python-packaging/
-.. _tox: https://tox.readthedocs.io/en/latest/
-.. _pytest: https://docs.pytest.org/en/stable/
 .. _GitHub Actions: https://github.com/features/actions
-.. _Codecov: https://about.codecov.io/
-.. _bump2version: https://github.com/c4urself/bump2version
 .. _PyPI: https://pypi.org
-.. _structlog: https://github.com/hynek/structlog
-.. _tox-gh-actions: https://github.com/ymyzk/tox-gh-actions
-.. _pdb-tools: https://github.com/haddocking/pdb-tools
-.. _test.pypi.org: https://test.pypi.org
-.. _@JoaoRodriges: https://github.com/JoaoRodrigues
+.. _blog post: https://blog.ionelmc.ro/2014/05/25/python-packaging/
+.. _bump2version: https://github.com/c4urself/bump2version
+.. _cookiecutter-pylibrary: https://github.com/ionelmc/cookiecutter-pylibrary
+.. _cookiecutter: https://cookiecutter.readthedocs.io/en/latest/index.html
+.. _discussion: https://github.com/joaomcteixeira/python-project-skeleton/discussions
+.. _documentation: https://python-project-skeleton.readthedocs.io/
+.. _even for scientific software: https://github.com/MolSSI/cookiecutter-cms
 .. _hypothesis: https://hypothesis.readthedocs.io/en/latest/
+.. _ionel: https://github.com/ionelmc
+.. _issue: https://github.com/joaomcteixeira/python-project-skeleton/issues
+.. _latest branch: https://github.com/joaomcteixeira/python-project-skeleton/tree/latest
+.. _master branch: https://github.com/joaomcteixeira/python-project-skeleton/tree/master
+.. _pdb-tools: https://github.com/haddocking/pdb-tools
+.. _project's documentation: https://python-project-skeleton.readthedocs.io/en/latest/index.html
+.. _pytest: https://docs.pytest.org/en/stable/
+.. _python-nameless: https://github.com/ionelmc/python-nameless
+.. _structlog: https://github.com/hynek/structlog
+.. _test.pypi.org: https://test.pypi.org
+.. _tox-gh-actions: https://github.com/ymyzk/tox-gh-actions
+.. _tox: https://tox.readthedocs.io/en/latest/
+.. _ReadTheDocs: https://readthedocs.org/

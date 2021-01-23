@@ -1,107 +1,67 @@
-CI Platforms
-------------
+Continuous Integration
+----------------------
 
-Here we provide an overview of the implementation strategies for the different continuous integration and quality report platforms. We have adopted a total of seven platforms, two for building and testing, two for code quality control, two for test coverage and one for documentation deployment:
+Here, I overview the implementation strategies for the different continuous integration and quality report platforms. In the previous versions of this skeleton template I used `Travis-CI`_ and `AppVeyor-CI`_ to accommodate testing. In the current version, I have migrated all these servers to GitHub actions, and I am not using Travis or AppVeyor anymore (for now).
+
+**Does this mean you should not use Travis or AppVeyor?** *Of course not.* Simply, the needs of my projects and the time I have available to dedicate to CI configuration do not require a dedicated segregation of strategies into multiple servers and services and I can perfectly accommodate my needs in GitHub actions.
+
+**Are GitHub actions better than Travis or AppVeyor?** I am not qualified to answer that question.
+
+When using this repository, keep in mind that you don't need to use all services adopted here. You can drop or add any other at your will.
+
+The following summaries the platforms adopted:
 
 #. Building and testing
-    * Travis-CI (Linux and OSX)
-    * Appveyor (Windows)
+    * GitHub actions
 #. Quality Control
     * Codacy
     * Code Climate
 #. Test Coverage
     * Codecov
-    * Coveralls
 #. Documentation
     * Read the Docs
 
-We acknowledge the existence of many other platforms for the same purposes. Though, we have chosen these because they fit the size and scope of the projects to which this template aims at and are those platforms most used within our field of development.
+I acknowledge the existence of many other platforms for the same purposes of those listed. I chose these because they fit the size and scope of my projects and are also the most used within my field of development.
 
-Choosing the CIs
-~~~~~~~~~~~~~~~~
+Configuring GitHub Actions
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Please note that you do not need to use all these platforms when adapting this template for your project, we do suggest you use at least one for each topic. For example, you do not need to activate Appveyor if you do not intent to deploy/distribute your code for Windows machines. Also, for quality control and test coverage one of the two provided options may suffice, however, having both is free and you can benefit from the different analysis reports the platforms provide.
+You may wish to read about `GitHub actions <https://github.com/features/actions>`_. In this repository there are two configured workflows: one to run the tests, lint, documentation check, and all kinds of integrity; and another to bump the version number and deploy new versions on PyPI.
 
-.. note::
+Unittesting and integrity
+`````````````````````````
 
-   To **NOT** use a specific CI platform simply do not activate it in their website, remove the configuration file from the root directory of the project, and remove the badge image link from the :code:`README.rst` file. Continue reading to understand better these concepts.
+Every time a new Pull Request is issued, the `ci-testing.yml <https://github.com/joaomcteixeira/python-project-skeleton/blob/master/.github/workflows/ci-testing.yml>`_ workflow is triggered. It is responsible to run the unittests, and repository integrity checks (defined at ``tox.ini``), and allow or disallow PR merge in case tests pass or fail.
 
-Activate CI
-~~~~~~~~~~~
+This template has two example PRs for demonstration: one which `tests pass <https://github.com/joaomcteixeira/python-project-skeleton/pull/10>`_ and another which `tests fail <https://github.com/joaomcteixeira/python-project-skeleton/pull/11>`_.
 
-To activate the different CI platforms for you repository just navigate to their website, login with your GitHub account and activate the repository. The configurations provided in this template should to the rest automatically :code:`:-)`, just start pushing your commits to the server.
+This workflow also runs when a PR is approved or a new version released.
 
-Travis-CI
-~~~~~~~~~
+Version release
+```````````````
 
-The configuration for `Travis-CI`_ is defined in the :code:`.travis.yml` file.
+Every time a Pull Request is merged to `master` the `deployment workflow <https://github.com/joaomcteixeira/python-project-skeleton/blob/master/.github/workflows/version-bump-and-package.yml>`_ is triggered. This action bumps the new version number according to the requests in the Pull Request, creates a new GitHub tag for that commit, and publishes in PyPI the new software version.
 
-Overall, the Travis configuration defines how to execute the different :ref:`tox environments<Uniformed Tests>` defined in the :code:`tox.ini` file.
+As discussed in another section, here I follow the rules of `Semantic Versioning 2 <https://semver.org/>`_.
 
-Find in the `.travis.yml`_ file the complete explanation for the implementation proposed, here we mirror the file:
+The PR rules to trigger a *major*, *minor*, or *patch* update concern mainly the main repository maintainer. If the Pull Request merge commit starts with ``[MAJOR]``, a major version increase takes place (attention to the rules of SV2!!), if a PR merge commit message starts with ``[FEATURE]`` it triggers a *minor* update. Finally, if the commit message as not special tag, a *patch* update is triggered.
 
-.. TODO::
+This whole workflow can be deactivate if the commit to the ``master`` branch starts with ``[SKIP]``.
 
-   Configure Travis to run OSX tests.
+In conclusion, every commit to ``master`` without the ``[SKIP]`` tag will be followed by a version upgrade, new tag, new commit to ``master`` and consequent release to PyPI. You have a visual representation of the commit workflow in the `Network plot <https://github.com/joaomcteixeira/python-project-skeleton/network>`_.
 
-.. literalinclude:: ../../.travis.yml
-   :language: yaml
+**How version numbers are managed?**
 
-Appveyor
-~~~~~~~~
-
-The configuration for `AppVeyor-CI`_ is defined in the :code:`.appveyor.yml` file.
-
-Contrary to our configuration for :ref:`Travis-CI`, with Appveyor, the configuration file simply attempts to build the package and run the unittests battery in the different Python versions.
-
-Find in the `.appveyor.yml_` file the complete explanation for the implementation proposed, here we mirror the file:
-
-.. literalinclude:: ../../.appveyor.yml
-   :language: yaml
-
-Codacy
-~~~~~~
-
-There is not much to configure for `Codacy` in the version we propose in this template. The only setup provided is to exclude the analysis of test scripts, this configuration is provided by the :code:`.codacy.yaml` file at the root director of the repository. If you wish Codacy to perform quality analysis on your test scripts just remove the file or comment the line. Here we mirror the `.codacy.yaml`_ file:
-
-.. literalinclude:: ../../.codacy.yaml
-    :language: yaml
-
-Code Climate
-~~~~~~~~~~~~
-
-There is not much to configure for `Code Climate`_ in the version we propose in this template. The only setup provided is to exclude the analysis of test scripts and other *dev* files Code Climate by default analysis, this configuration is provided by the :code:`.codeclimate.yml` file at the root director of the repository. If you wish Code Climate to perform quality analysis on your test scripts just remove the file or comment the line.
-
-Code Climate provides a **technical debt** percentage that can be retrieved nicely with a `badge<Badges>`
-
-Here we mirror the `.codeclimate.yml`_ file:
-
-.. literalinclude:: ../../.codeclimate.yml
-    :language: yaml
+There are two main version string handlers in the ecosystem I operate: `bump2version`_ and `versioneer`_.  I chose *bump2version* for this repository template. Why? I have no argument against *versioneer* or others, simply I found ``bumpversion`` to be so simple, effective, and configurable that I could only adopt it. Congratulations to both projects nonetheless.
 
 Code coverage
 ~~~~~~~~~~~~~
 
-Codecov
-```````
+``Codecov`` is used very frequently to report test coverage rates. Activate your repository under ``https://about.codecov.io/``, and follow their instructions.
 
-`Codecov`_ is used very frequently to report test coverage rates the software under development. Activate your repository under Codecov as done for any other CI platform. Additional configurations:
+`Coverage`_ reports are sent to Codecov servers when ``ci-testing`` workflow takes place. This happens for each PR and each commit ``master``.
 
-* In general settings change the default branch to the :code:`latest` branch, if that is your preferred settings.
-
-Coveralls
-`````````
-
-`Coveralls` is also included in this template skeleton. Again, activate the coveralls profile by linking your repository to the server (same as with other CI platforms).
-
-The configuration to Coveralls, :code:`.coveragerc` is the same as of :ref:`Codecov`.
-
-Sending coverage reports
-````````````````````````
-
-`Coverage`_ reports are sent to both Codecov and Coveralls servers during the :ref:`Travis-tox<Travis-CI>` :code:`-cover` environment. `.travis.yml`_ configuration handles this and you do not need to worry about nothing else.
-
-The options specific to Codecov report (actually `coverage`_ package) are described in `.coveragerc`_ file, mirrored bellow, description of the configuration file is provided as comments.
+The `.coveragerc`_ file, mirrored bellow, configures ``Coverage``.
 
 .. literalinclude:: ../../.coveragerc
 
@@ -111,10 +71,31 @@ The :code:`.coveragerc` can be expanded to further restraint coverage analysis, 
 
     [report]
     exclude_lines =
-        if self.debug:
-        pragma: no cover
-        raise NotImplementedError
-        if __name__ == .__main__.:
+    if self.debug:
+    pragma: no cover
+    raise NotImplementedError
+    if __name__ == .__main__.:
+
+Code Quality
+~~~~~~~~~~~~
+
+Here, we have both ``Codacy`` and ``Code Climate`` as code quality inspectors. There are also others out there, feel free to suggested different ones in the `Discussion tab <https://github.com/joaomcteixeira/python-project-skeleton/discussions>`_.
+
+Codacy
+``````
+
+There is not much to configure for `Codacy` as far as this template is concerned. The only setup provided is to exclude the analysis of test scripts, this configuration is provided by the :code:`.codacy.yaml` file at the root director of the repository. If you wish Codacy to perform quality analysis on your test scripts just remove the file or comment the line. Here we mirror the `.codacy.yaml`_ file:
+
+.. literalinclude:: ../../.codacy.yaml
+    :language: yaml
+
+Code Climate
+````````````
+
+There is not much to configure for `Code Climate`_ as well. The only setup provided is to exclude the analysis of test scripts and other *dev* files Code Climate checks by default, the :code:`.codeclimate.yml` file at the root director of the repository configures this behavior (look at the bottom lines). If you wish Code Climate to perform quality analysis on your test scripts just remove the file or comment the line.
+
+Code Climate provides a **technical debt** percentage that can be retrieved nicely with :ref:`Badges`.
+
 
 .. _Travis-CI: https://travis-ci.org
 .. _.travis.yml: https://github.com/joaomcteixeira/python-project-skeleton/blob/latest/.travis.yml
@@ -128,3 +109,5 @@ The :code:`.coveragerc` can be expanded to further restraint coverage analysis, 
 .. _Code Climate: https://codeclimate.com/
 .. _coverage: https://pypi.org/project/coverage/
 .. _.coveragerc: https://github.com/joaomcteixeira/python-project-skeleton/blob/latest/.coveragerc
+.. _bump2version: https://pypi.org/project/bumpversion/
+.. _versioneer: https://github.com/warner/python-versioneer
