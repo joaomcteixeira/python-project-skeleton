@@ -2,6 +2,9 @@
 Changelog
 =========
 
+v0.6.0 (2021-01-24)
+------------------------------------------------------------
+
 * updates package check command, now uses twine
 * add scripts to clean up dist files after ``tox -e check``
 * Adds checks to CHANGELOG

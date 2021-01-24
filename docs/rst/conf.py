@@ -48,7 +48,7 @@ project = 'Python-Project-Skeleton'
 year = '2020'
 author = 'Joao MC Teixeira'
 copyright = '{0}, {1}'.format(year, author)
-version = release = '0.5.0'
+version = release = '0.6.0'
 
 pygments_style = 'trac'
 templates_path = ['.']

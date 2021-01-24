@@ -36,7 +36,7 @@ long_description = '{}\n{}'.format(
 
 setup(
     name='jmct-sampleproject',
-    version='0.5.0',
+    version='0.6.0',
     description='A skeleton template for Python projects.',
     long_description=long_description,
     long_description_content_type='text/x-rst',
