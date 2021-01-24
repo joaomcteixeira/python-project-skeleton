@@ -2,6 +2,14 @@
 Changelog
 =========
 
+* increased granularity of tox environments
+* new lint env
+* new chlog env
+* check renamed to build
+* tox environment scopes separated into different actions
+* new lint only dedicated action
+* new pull request requirements action
+
 v0.6.0 (2021-01-24)
 ------------------------------------------------------------
 
