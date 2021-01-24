@@ -1,5 +1,6 @@
 # tox git actions integration was taken from:
 # https://github.com/ymyzk/tox-gh-actions/tree/e11a29e2e5c73b6e48f5d4ee379f903476d013c0
+# Tests unittest pass, documentation builds, and package builds
 name: Tests
 
 on:
