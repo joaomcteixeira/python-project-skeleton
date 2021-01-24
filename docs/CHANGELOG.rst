@@ -2,6 +2,9 @@
 Changelog
 =========
 
+v0.5.0 (2021-01-24)
+------------------------------------------------------------
+
 * Adds documentation for some configuration files
 
 v0.4.0 (2021-01-23)
