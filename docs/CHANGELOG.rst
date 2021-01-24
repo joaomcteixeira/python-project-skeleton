@@ -2,6 +2,9 @@
 Changelog
 =========
 
+v0.7.0 (2021-01-24)
+------------------------------------------------------------
+
 * increased granularity of tox environments
 * new lint env
 * new chlog env
