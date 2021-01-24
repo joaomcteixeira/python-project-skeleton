@@ -13,6 +13,10 @@ changelog = Path(folder, 'docs', 'CHANGELOG.rst')
 with open(changelog, 'r') as fin:
     for line in fin:
         if line.startswith('v'):
-            raise ValueError
+            raise ValueError(
+                'Please add a summary of your additions to docs/CHANGELOG.rst. '
+                'As described in: https://python-project-skeleton.readthedocs.io'
+                '/en/latest/contributing.html#update-changelog.'
+                )
         elif line.startswith('*'):
             break
