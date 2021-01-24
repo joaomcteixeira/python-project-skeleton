@@ -2,6 +2,8 @@
 Changelog
 =========
 
+* Adds documentation for some configuration files
+
 v0.4.0 (2021-01-23)
 ------------------------------------------------------------
 
