@@ -126,8 +126,8 @@ Also, you can run individual environments if you wish to test only specific func
 
 ::
 
-    tox -e check  # code style and file compatibility
-    tox -e spell  # spell checks documentation
+    tox -e lint  # code style
+    tox -e check  # code style and file compatibility for PR and packaging
     tox -e docs  # only builds the documentation
     tox -e py37
 

@@ -2,6 +2,13 @@
 Changelog
 =========
 
+* updates package check command, now uses twine
+* add scripts to clean up dist files after ``tox -e check``
+* Adds checks to CHANGELOG
+* Adds new tox env just for lint checks
+* lint is kept in ``check`` env nonetheless
+* updates documentation accordingly
+
 v0.5.0 (2021-01-24)
 ------------------------------------------------------------
 

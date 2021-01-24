@@ -39,6 +39,8 @@ setup(
     version='0.5.0',
     description='A skeleton template for Python projects.',
     long_description=long_description,
+    long_description_content_type='text/x-rst',
+    license='MIT License',
     author='Joao Miguel Correia Teixeira',
     author_email='joaomcteixeira@gmail.com',
     url='https://github.com/joaomcteixeira/python-project-skeleton',
