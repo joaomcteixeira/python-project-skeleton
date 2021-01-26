@@ -77,7 +77,7 @@ While you are developing, you can execute ``tox`` as needed to run your unittest
 Update CHANGELOG
 ~~~~~~~~~~~~~~~~
 
-Update the changelog file under :code:`docs/CHANGELOG.rst` with an explanatory bullet list of your contribution. Add that list right before the title and above the last version subtitle::
+Update the changelog file under :code:`docs/CHANGELOG.rst` with an explanatory bullet list of your contribution. Add that list right after the main title and before the last version subtitle::
 
     Changelog
     =========
@@ -127,21 +127,22 @@ Also, you can run individual environments if you wish to test only specific func
 ::
 
     tox -e lint  # code style
-    tox -e check  # code style and file compatibility for PR and packaging
+    tox -e build  # packaging
     tox -e docs  # only builds the documentation
+    tox -e prreqs  # special requirements before Pull Request
     tox -e py37
 
 
 .. _tox.ini: https://github.com/joaomcteixeira/python-project-skeleton/blob/latest/tox.ini
 .. _Tox: https://tox.readthedocs.io/en/latest/
 .. _tox is installed: https://tox.readthedocs.io/en/latest/install.html
-.. _MANIFEST.in: https://github.com/joaomcteixeira/python-project-skeleton/blob/latest/MANIFEST.in
+.. _MANIFEST.in: https://github.com/joaomcteixeira/python-project-skeleton/blob/master/MANIFEST.in
 .. _Fork this repository before contributing: https://github.com/joaomcteixeira/python-project-skeleton/network/members
 .. _up to date with the upstream: https://gist.github.com/CristinaSolana/1885435
 .. _contributions to the project: https://github.com/joaomcteixeira/python-project-skeleton/network
 .. _Gitflow Workflow: https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
 .. _Pull Request: https://github.com/joaomcteixeira/python-project-skeleton/pulls
-.. _PULLREQUEST.rst: https://github.com/joaomcteixeira/python-project-skeleton/blob/latest/docs/PULLREQUEST.rst
+.. _PULLREQUEST.rst: https://github.com/joaomcteixeira/python-project-skeleton/blob/master/docs/PULLREQUEST.rst
 .. _1: https://git-scm.com/docs/git-merge#Documentation/git-merge.txt---no-ff
 .. _2: https://stackoverflow.com/questions/9069061/what-is-the-difference-between-git-merge-and-git-merge-no-ff
 .. _Installing packages using pip and virtual environments: https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment

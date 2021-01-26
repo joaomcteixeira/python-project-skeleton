@@ -2,6 +2,9 @@
 Changelog
 =========
 
+* renames tox env `chlog` to a more general `prreqs`
+* corrects details in `CONTRIBUTING.rst`
+
 v0.7.0 (2021-01-24)
 ------------------------------------------------------------
 
