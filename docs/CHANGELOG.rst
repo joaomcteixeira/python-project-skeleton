@@ -2,7 +2,7 @@
 Changelog
 =========
 
-* add for next. Addition with SKIP tag.
+* updates radon commands in `tox.ini`
 
 v0.8.0 (2021-01-26)
 ------------------------------------------------------------
