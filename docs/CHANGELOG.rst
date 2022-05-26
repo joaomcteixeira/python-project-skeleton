@@ -2,6 +2,9 @@
 Changelog
 =========
 
+* revert to `pr` testenv in `tox`
+* Remove the empty line in changelog title
+
 v0.9.0 (2022-05-26)
 ------------------------------------------------------------
 
