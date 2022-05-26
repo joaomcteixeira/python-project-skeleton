@@ -52,7 +52,7 @@ setup(
     classifiers=[
         # complete classifier list:
         # http://pypi.python.org/pypi?%3Aaction=list_classifiers
-        'Development Status :: 3 - Alpha',
+        'Development Status :: 4 - Beta',
         # 'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)',
         'License :: OSI Approved :: MIT License',
         'Intended Audience :: Science/Research',
@@ -80,9 +80,8 @@ setup(
         ],
     python_requires='>=3.6, <4',
     install_requires=[
+        # https://stackoverflow.com/questions/14399534
         'matplotlib>=3',
-        # 'click',
-        # eg: 'aspectlib==1.1.1', 'six>=1.7',
         ],
     extras_require={
         # eg:
