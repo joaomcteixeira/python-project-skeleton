@@ -2,6 +2,9 @@
 Changelog
 =========
 
+v0.9.0 (2022-05-26)
+------------------------------------------------------------
+
 * update tox environments. Tests now run with `test` env.
 * update/simplify github actions accordingly
 * attempts correct changelog line conflict
