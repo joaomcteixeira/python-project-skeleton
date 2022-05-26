@@ -3,6 +3,7 @@ graft src
 
 include *.rst
 include LICENSE
+include requirements.txt
 
 exclude .appveyor.yml
 exclude .bumpversion.cfg

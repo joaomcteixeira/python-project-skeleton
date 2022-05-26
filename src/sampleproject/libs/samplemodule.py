@@ -2,13 +2,17 @@
 samplemodule that performs sample operations.
 
 Contains:
-    - sampleclass
+    - SampleClass
 """
+
+
+def this_is_and_undocumented_function(some_parameter):  # noqa: D103
+    return
 
 
 class SampleClass:
     """Documentation of the SampleClass."""
-    
+
     def __init__(self):
         """Initiatlizes samples class."""
         return
@@ -17,7 +21,7 @@ class SampleClass:
     def true():
         """Return True my friend."""
         return True
-    
+
     @classmethod
     def false(cls):
         """

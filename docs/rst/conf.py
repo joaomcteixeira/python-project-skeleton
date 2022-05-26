@@ -3,9 +3,9 @@
 from __future__ import unicode_literals
 
 import os
-import mock
 import sys
 
+import mock
 import sphinx_py3doc_enhanced_theme
 
 
