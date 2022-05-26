@@ -13,7 +13,7 @@ Once you have created a new repository from this template, these are the names y
 
     import sampleproject
 
-3. In ``setup.py`` rename ``jmct-sampleproject`` for the name your project will have at PyPI. Usually this is the same as the name you decided above.
+3. In ``setup.py`` rename ``sampleproject`` for the name your project will have at PyPI. Usually this is the same as the name you decided above.
 
 4. Where it says ``python-project-skeleton`` that is the name of the repository. It might be the same name as the Python package and the PyPI package, that is up to you entirely.
 

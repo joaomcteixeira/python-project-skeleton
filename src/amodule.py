@@ -7,4 +7,4 @@ With several lines.
 
 def hello():
     """Print 'hello module'."""
-    print('hello module')
+    print('hello module')  # noqa: T201

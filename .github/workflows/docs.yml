@@ -1,9 +1,8 @@
-# Lint tests run on PR
-# but should not run after push to master because reporting
-# these after push is meaningless to the building of the package
-name: lint
+name: docs
 
 on:
+  push:
+    branches: [main]
   pull_request:
     branches: [main]
 
@@ -25,8 +24,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade pip setuptools wheel
-        pip install virtualenv tox
+        pip install tox
 
-    - name: test lint
-      run: tox -e lint
+    - name: test docs
+      run: tox -e docs

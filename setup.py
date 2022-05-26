@@ -36,7 +36,7 @@ long_description = '{}\n{}'.format(
 
 setup(
     name='sampleproject',
-    version='0.8.1',
+    version='0.9.0',
     description='A skeleton template for Python projects.',
     long_description=long_description,
     long_description_content_type='text/x-rst',
@@ -52,7 +52,7 @@ setup(
     classifiers=[
         # complete classifier list:
         # http://pypi.python.org/pypi?%3Aaction=list_classifiers
-        'Development Status :: 3 - Alpha',
+        'Development Status :: 4 - Beta',
         # 'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)',
         'License :: OSI Approved :: MIT License',
         'Intended Audience :: Science/Research',
@@ -62,6 +62,7 @@ setup(
         'Operating System :: Microsoft',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
         'Topic :: Scientific/Engineering :: Bio-Informatics',
         ],
     project_urls={
@@ -76,11 +77,10 @@ setup(
         'project-skeleton', 'sample-project',
         # eg: 'keyword1', 'keyword2', 'keyword3',
         ],
-    python_requires='>=3.6, <3.9',
+    python_requires='>=3.7, <4',
     install_requires=[
+        # https://stackoverflow.com/questions/14399534
         'matplotlib>=3',
-        # 'click',
-        # eg: 'aspectlib==1.1.1', 'six>=1.7',
         ],
     extras_require={
         # eg:

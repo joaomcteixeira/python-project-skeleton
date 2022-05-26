@@ -129,8 +129,7 @@ Also, you can run individual environments if you wish to test only specific func
     tox -e lint  # code style
     tox -e build  # packaging
     tox -e docs  # only builds the documentation
-    tox -e prreqs  # special requirements before Pull Request
-    tox -e py37
+    tox -e test  # runs unit tests
 
 
 .. _tox.ini: https://github.com/joaomcteixeira/python-project-skeleton/blob/latest/tox.ini

@@ -3,9 +3,9 @@
 from __future__ import unicode_literals
 
 import os
-import mock
 import sys
 
+import mock
 import sphinx_py3doc_enhanced_theme
 
 
@@ -48,7 +48,7 @@ project = 'Python-Project-Skeleton'
 year = '2020'
 author = 'Joao MC Teixeira'
 copyright = '{0}, {1}'.format(year, author)
-version = release = '0.8.1'
+version = release = '0.9.0'
 
 pygments_style = 'trac'
 templates_path = ['.']
