@@ -11,7 +11,7 @@ Contents
    configuration
    installation
    usage
-   contributing
+   CONTRIBUTING
    reference/index
    changelog
    authors
