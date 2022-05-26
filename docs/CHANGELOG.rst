@@ -6,6 +6,7 @@ Changelog
 * update/simplify github actions accordingly
 * attempts correct changelog line conflict
 * update requirements.txt now depending on `setup.py`
+* drop python 3.6
 
 v0.8.1 (2021-11-09)
 ------------------------------------------------------------
