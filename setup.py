@@ -60,7 +60,6 @@ setup(
         'Operating System :: POSIX',
         'Operating System :: MacOS',
         'Operating System :: Microsoft',
-        'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
@@ -78,7 +77,7 @@ setup(
         'project-skeleton', 'sample-project',
         # eg: 'keyword1', 'keyword2', 'keyword3',
         ],
-    python_requires='>=3.6, <4',
+    python_requires='>=3.7, <4',
     install_requires=[
         # https://stackoverflow.com/questions/14399534
         'matplotlib>=3',
