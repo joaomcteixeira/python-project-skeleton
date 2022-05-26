@@ -2,6 +2,9 @@
 Changelog
 =========
 
+v0.9.2 (2022-05-26)
+------------------------------------------------------------
+
 * Update badges in `readme` and corresponding `master` rename to `main` in services.
 
 v0.9.1 (2022-05-26)
