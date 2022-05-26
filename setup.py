@@ -60,8 +60,10 @@ setup(
         'Operating System :: POSIX',
         'Operating System :: MacOS',
         'Operating System :: Microsoft',
+        'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
         'Topic :: Scientific/Engineering :: Bio-Informatics',
         ],
     project_urls={
@@ -76,7 +78,7 @@ setup(
         'project-skeleton', 'sample-project',
         # eg: 'keyword1', 'keyword2', 'keyword3',
         ],
-    python_requires='>=3.6, <3.9',
+    python_requires='>=3.6, <4',
     install_requires=[
         'matplotlib>=3',
         # 'click',

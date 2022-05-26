@@ -2,6 +2,10 @@
 Changelog
 =========
 
+* update tox environments. Tests now run with `test` env.
+* update/simplify github actions accordingly
+* attempts correct changelog line conflict
+
 v0.8.1 (2021-11-09)
 ------------------------------------------------------------
 

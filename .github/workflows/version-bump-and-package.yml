@@ -1,11 +1,11 @@
 # taken and upgraded from:
 # https://github.com/haddocking/pdb-tools/blob/f019d163d8f8cc5a0cba288e02f5a63a969719f6/.github/workflows/bump-version-on-push.yml
-name: Package Build
+name: version bump and deploy
 
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   bump-version:
@@ -22,7 +22,7 @@ jobs:
         # When I tried
         # https://docs.github.com/en/actions/reference/authentication-in-a-workflow
         # I had some problems, they could be my fault, but yet, I felt using a
-        # dedicated token would be better and suffice
+        # dedicated token would be better and enough
         token: ${{ secrets.AC_GITHUB_TOKEN }}
 
     - name: Set up Python
