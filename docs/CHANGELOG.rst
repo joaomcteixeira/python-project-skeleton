@@ -2,6 +2,9 @@
 Changelog
 =========
 
+v0.9.5 (2022-06-29)
+------------------------------------------------------------
+
 * Update CI YAML files:
 * Add python 3.10
 * reduce number of installs
