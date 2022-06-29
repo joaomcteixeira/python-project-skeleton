@@ -2,6 +2,8 @@
 Changelog
 =========
 
+* Add code of conduct from Contributor Covenant v2.
+
 v0.9.2 (2022-05-26)
 ------------------------------------------------------------
 
