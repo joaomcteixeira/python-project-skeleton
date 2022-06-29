@@ -4,6 +4,7 @@ graft src
 include *.rst
 include LICENSE
 include requirements.txt
+include CODE_OF_CONDUCT.md
 
 exclude .appveyor.yml
 exclude .bumpversion.cfg
