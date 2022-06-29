@@ -2,6 +2,10 @@
 Changelog
 =========
 
+* Update CI YAML files:
+* Add python 3.10
+* reduce number of installs
+
 v0.9.4 (2022-06-29)
 ------------------------------------------------------------
 
