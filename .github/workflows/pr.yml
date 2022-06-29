@@ -1,8 +1,6 @@
-name: build
+name: pr requirements
 
 on:
-  push:
-    branches: [main]
   pull_request:
     branches: [main]
 
@@ -26,5 +24,5 @@ jobs:
       run: |
         pip install tox
 
-    - name: tox build
-      run: tox -e build
+    - name: test docs
+      run: tox -e pr

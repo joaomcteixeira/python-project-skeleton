@@ -2,21 +2,17 @@
 Python Package Skeleton Template
 ================================
 
-.. image:: https://github.com/joaomcteixeira/python-project-skeleton/workflows/Tests/badge.svg?branch=master
-    :target: https://github.com/joaomcteixeira/python-project-skeleton/actions?workflow=Tests
-    :alt: Test Status
+.. image:: https://github.com/joaomcteixeira/python-project-skeleton/workflows/tests/badge.svg?branch=main
+    :target: https://github.com/joaomcteixeira/python-project-skeleton/actions?workflow=tests
+    :alt: unit tests
 
-.. image:: https://github.com/joaomcteixeira/python-project-skeleton/workflows/Package%20Build/badge.svg?branch=master
-    :target: https://github.com/joaomcteixeira/python-project-skeleton/actions?workflow=Package%20Build
-    :alt: Package Build
+.. image:: https://github.com/joaomcteixeira/python-project-skeleton/workflows/build/badge.svg?branch=main
+    :target: https://github.com/joaomcteixeira/python-project-skeleton/actions?workflow=build
+    :alt: build
 
-.. image:: https://codecov.io/gh/joaomcteixeira/python-project-skeleton/branch/master/graph/badge.svg
+.. image:: https://codecov.io/gh/joaomcteixeira/python-project-skeleton/branch/main/graph/badge.svg
     :target: https://codecov.io/gh/joaomcteixeira/python-project-skeleton
     :alt: Codecov
-
-.. image:: https://img.shields.io/codacy/grade/ae042ac066554bfab398024b0beea6a5/master?label=Codacy
-    :target: https://app.codacy.com/manual/joaomcteixeira/python-project-skeleton/dashboard
-    :alt: Codacy
 
 .. image:: https://api.codeclimate.com/v1/badges/d96cc9a1841a819cd4f5/maintainability
    :target: https://codeclimate.com/github/joaomcteixeira/python-project-skeleton/maintainability
@@ -84,7 +80,7 @@ As usual in any GitHub based project, raise an `issue`_ if you find any bug or r
 Version
 =======
 
-v0.9.0
+v0.9.3
 
 .. _GitHub Actions: https://github.com/features/actions
 .. _PyPI: https://pypi.org
