@@ -2,6 +2,8 @@
 Changelog
 =========
 
+* move pull request template to ``.github`` folder.
+
 v0.9.3 (2022-06-29)
 ------------------------------------------------------------
 
