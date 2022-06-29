@@ -31,11 +31,11 @@ def read(*names, **kwargs):
 
 long_description = '{}\n{}'.format(
     read('README.rst'),
-    read(join('docs', 'CHANGELOG.rst')),
+    read('CHANGELOG.rst'),
     )
 
 setup(
-    name='sampleproject',
+    name='jmct-sampleproject',
     version='0.9.0',
     description='A skeleton template for Python projects.',
     long_description=long_description,
