@@ -110,8 +110,8 @@ As usual for any GitHub-based project, raise an `issue`_ if you find any bug or
 want to suggest an improvement, or open a `discussion`_ if you want to discuss
 or chat :wink:
 
-Projects this skeleton
-======================
+Projects using this skeleton
+============================
 
 Below, a list of the projects using this repository as template or as base for
 their CI implementations:
