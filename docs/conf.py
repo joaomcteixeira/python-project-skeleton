@@ -32,7 +32,7 @@ extensions = [
 todo_include_todos = True
 
 exclude_patterns = [
-    'i_*',
+    'nonlisted/*.rst',
     ]
 
 if os.getenv('SPELLCHECK'):
@@ -40,7 +40,7 @@ if os.getenv('SPELLCHECK'):
     spelling_show_suggestions = True
     spelling_lang = 'en_US'
     # https://sphinxcontrib-spelling.readthedocs.io/en/latest/customize.html
-    spelling_word_list_filename = ['../spelling_wordlist.txt']
+    spelling_word_list_filename = ['spelling_wordlist.txt']
 
 source_suffix = '.rst'
 master_doc = 'index'

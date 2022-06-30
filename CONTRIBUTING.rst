@@ -1,6 +1,8 @@
 Contributing
 ============
 
+.. start-here
+
 How to contribute to this project.
 
 Fork this repository
