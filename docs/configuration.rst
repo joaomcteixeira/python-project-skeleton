@@ -6,7 +6,7 @@ how you can configure those same services for you repository.
 
 .. include:: nonlisted/project_layout.rst
 
-.. include:: nonlisted/cplatforms.rst
+.. include:: nonlisted/ci_platforms.rst
 
 .. include:: nonlisted/readthedocs.rst
 

@@ -41,6 +41,6 @@ releases that same day. Each new version should be tagged accordingly in git.
 Additions to the documentation *also* count to the version number.
 
 Additions to the CI platform *may* skip an increase in version number, using the
-``[SKIP]`` tag in the merge commit message, as explained in :ref:`version release`.
+``[SKIP]`` tag in the merge commit message, as explained in :ref:`version release <Version release>`.
 
 .. _Semantic Versioning 2: https://semver.org/#semantic-versioning-200
