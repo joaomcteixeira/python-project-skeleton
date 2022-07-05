@@ -9,21 +9,24 @@ The src layout
 
 I discovered storing the project's source code underneath a ``src`` directory
 layer instead of directly in the project's root folder is one of the most
-controversial discussions regarding organization of Python projects. Here I
+controversial discussions regarding the organization of Python projects. Here, I
 adopted the ``src``-based layout discussed by `ionel`_ in his `blog post`_.
-After more than one year using ``src`` I have nothing to complain about, on the
-contrary, it saved many issues related with ``import`` statements. Are you
-importing from the repository? Are you importing the installed version? The
-``src`` guarantees stable imports. More on ionel's blog (see also `src-nosrc
-example`_.
+After more than one year of using ``src``, I have nothing to complain about; on
+the contrary, it saved many issues related to ``import`` statements. Either
+importing from the repository or the installed version? The ``src`` guarantees
+stable imports. More on ionel's blog (see also `src-nosrc example`_).
+
+The ``src/sampleproject`` folder hosts the actual source of the project. In the
+current version of this template, I don't discuss how to organize a source code
+of a project. I am looking forward doing that in future versions.
 
 Testing
 ~~~~~~~
 
-Tests are nicely encapsulated in a separate ``tests`` folder. With this
+Here, tests are encapsulated in a separate ``tests`` folder. With this
 encapsulation, outside the main library folder, it is easier to control that
 tests do not import from relative paths and can only access the library code
-after library installation (whatever the installation mode is). Also, having
+after library installation (regardless of the installation mode). Also, having
 ``tests`` in a separated folder facilitates the configuration files layout on
 excluding tests from deployment (``MANIFEST.in``) and code quality
 (``.codacy.yaml``) or coverage (``.coveragerc``).
@@ -31,9 +34,12 @@ excluding tests from deployment (``MANIFEST.in``) and code quality
 Documentation
 ~~~~~~~~~~~~~
 
-All documentation related files are stored in a ``docs`` folder. These include
-all files related to the library documentation, as well as, development
-process, like: ``AUTHORS``, ``CONTRIBUTING``, ``CHANGELOG``, etc.
+All documentation related files are stored in a ``docs`` folder. Files in
+``docs`` will be compiled using Sphinx to generate the HTML documentation web
+pages. You can follow the file and folder structure in this repository as an
+example of how to assemble the documentation. You will see files that contain
+text and others that import text from relative files. The latter strategy avoids
+repeating information.
 
 devtools
 ~~~~~~~~

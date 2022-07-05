@@ -72,7 +72,7 @@ of what was actually being implemented. Hence, assembling this *template* from
 scratch as a full working repository was my best approach to obtain a useful
 understanding of CI.  Now, this repository serves as a reference guide for all
 my projects and hopefully will serve you, too. I keep constantly updating this
-repository, expect one to two update/reviews per year.
+repository, expect one to two updates/reviews per year.
 
 Acknowledgments
 ---------------

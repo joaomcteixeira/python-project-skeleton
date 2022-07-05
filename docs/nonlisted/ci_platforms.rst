@@ -5,7 +5,7 @@ Here, I overview the implementation strategies for the different continuous
 integration and quality report platforms. In the previous versions of this
 skeleton template, I used `Travis-CI`_ and `AppVeyor-CI`_ to run the testing
 workflows. In the current version, I have migrated all these operations to GitHub
-Actions, and dropped using Travis-CI and AppVeyor.
+Actions.
 
 **Does this mean you should not use Travis or AppVeyor?** *Of course not.*
 Simply, the needs of my projects and the time I have available to dedicate to
@@ -17,9 +17,11 @@ GitHub actions.
 answer that question.
 
 When using this repository, keep in mind that you don't need to use all
-services adopted here. You can drop or add any other at your will.
+services adopted here. You can drop or add any other at your will by removing
+the files or lines related to them or adding new ones following the patterns
+presented here.
 
-The following summaries the platforms adopted:
+The following list summarizes the platforms adopted:
 
 #. Building and testing
     * GitHub actions
@@ -33,64 +35,59 @@ The following summaries the platforms adopted:
 
 I acknowledge the existence of many other platforms for the same purposes of
 those listed. I chose these because they fit the size and scope of my projects
-and are also the most used within my field of development.
+and are also the most used within my field of work.
 
 Configuring GitHub Actions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You may wish to read about `GitHub actions
-<https://github.com/features/actions>`_. In this repository there are two
-configured workflows: one to run the tests, lint, documentation check, and all
-kinds of integrity; and another to bump the version number and deploy new
-versions on PyPI.
+<https://github.com/features/actions>`_. Here, I have one Action workflow per
+environment defined in ``tox``. Each of these workflows runs on each of the
+python supported versions and OSes. These tests regard unit tests,
+documentation build, lint, integrity checks, and, finally, version bump and
+package deploying on PyPI.
 
-Unittesting and integrity
-`````````````````````````
+The CI workflows trigger every time a new pull request is created and at each
+commit to that PR. However, the ``lint`` tests do not trigger when the PR is
+merged to the ``main`` branch. On the other hand, the ``version bump`` workflow
+triggers only when the PR is accepted.
 
-Every time a new Pull Request is issued, the `ci-testing.yml
-<https://github.com/joaomcteixeira/python-project-skeleton/blob/master/.github/workflows/ci-testing.yml>`_
-workflow is triggered. It is responsible to run the unittests, and repository
-integrity checks (defined at ``tox.ini``), and allow or disallow PR merge in
-case tests pass or fail.
-
-This template has two example PRs for demonstration: one which `tests pass
+In this repository you can find two PRs demonstrating: one where `tests pass
 <https://github.com/joaomcteixeira/python-project-skeleton/pull/10>`_ and
-another which `tests fail
+another where `tests fail
 <https://github.com/joaomcteixeira/python-project-skeleton/pull/11>`_.
-
-This workflow also runs when a PR is approved or a new version released.
 
 Version release
 ```````````````
 
-Every time a Pull Request is merged to `master` the `deployment workflow
+Every time a Pull Request is merged to `main` branch, the `deployment workflow
 <https://github.com/joaomcteixeira/python-project-skeleton/blob/master/.github/workflows/version-bump-and-package.yml>`_
-is triggered. This action bumps the new version number according to the
-requests in the Pull Request, creates a new GitHub tag for that commit, and
+triggers. This action bumps the new version number according to the
+merge commit message, creates a new GitHub tag for that commit, and
 publishes in PyPI the new software version.
 
 As discussed in another section, here I follow the rules of `Semantic
 Versioning 2 <https://semver.org/>`_.
 
-The PR rules to trigger a *major*, *minor*, or *patch* update concern mainly
-the main repository maintainer. If the Pull Request merge commit starts with
-``[MAJOR]``, a major version increase takes place (attention to the rules of
-SV2!!), if a PR merge commit message starts with ``[FEATURE]`` it triggers a
-*minor* update. Finally, if the commit message as not special tag, a *patch*
-update is triggered.
+If the Pull Request merge commit starts with ``[MAJOR]``, a major version
+increase takes place (attention to the rules of SV2!), if a PR merge commit
+message starts with ``[FEATURE]`` it triggers a *minor* update. Finally, if the
+commit message as not special tag, a *patch* update is triggered. Whether to
+trigger a *major*, *minor*, or *patch* update concern mainly the main
+repository maintainer.
 
-This whole workflow can be deactivate if the commit to the ``master`` branch
+This whole workflow can be deactivate if the commit to the ``main`` branch
 starts with ``[SKIP]``.
 
-In conclusion, every commit to ``master`` without the ``[SKIP]`` tag will be
-followed by a version upgrade, new tag, new commit to ``master`` and consequent
+In conclusion, every commit to ``main`` without the ``[SKIP]`` tag will be
+followed by a version upgrade, new tag, new commit to ``main`` and consequent
 release to PyPI. You have a visual representation of the commit workflow in the
 `Network plot
 <https://github.com/joaomcteixeira/python-project-skeleton/network>`_.
 
 **How version numbers are managed?**
 
-There are two main version string handlers in the ecosystem I operate:
+There are two main version string handlers out there:
 `bump2version`_ and `versioneer`_.  I chose *bump2version* for this repository
 template. Why? I have no argument against *versioneer* or others, simply I
 found ``bumpversion`` to be so simple, effective, and configurable that I could
@@ -103,10 +100,10 @@ Code coverage
 your repository under ``https://about.codecov.io/``, and follow their
 instructions.
 
-`Coverage`_ reports are sent to Codecov servers when ``ci-testing`` workflow
-takes place. This happens for each PR and each commit ``master``.
+`Coverage`_ reports are sent to Codecov servers when the ``test.yml`` workflow
+takes place. This happens for each PR and each merge commit to ``maint``.
 
-The `.coveragerc`_ file, mirrored bellow, configures ``Coverage``.
+The `.coveragerc`_ file, mirrored below, configures ``Coverage`` reports.
 
 .. literalinclude:: ../.coveragerc
 
@@ -121,6 +118,9 @@ for example adding these lines to the :code:`exclude` tag:
     pragma: no cover
     raise NotImplementedError
     if __name__ == .__main__.:
+
+Remember that if you don't want to use these services, you can simply remove
+the respective files from your project.
 
 Code Quality
 ~~~~~~~~~~~~
@@ -146,12 +146,12 @@ your test scripts just remove the file or comment the line. Here we mirror the
 Code Climate
 ````````````
 
-There is not much to configure for `Code Climate`_ as well. The only setup
-provided is to exclude the analysis of test scripts and other *dev* files Code
-Climate checks by default, the :code:`.codeclimate.yml` file at the root
-director of the repository configures this behavior (look at the bottom lines).
-If you wish Code Climate to perform quality analysis on your test scripts just
-remove the file or comment the line.
+There is not much to configure for `Code Climate`_, as well. The only setup
+provided here is to exclude the analysis of test scripts and other *dev* files
+Code Climate checks by default, the :code:`.codeclimate.yml` file at the root
+directory of the repository configures this behavior (look at the bottom
+lines).  If you wish Code Climate to perform quality analysis on your test
+scripts just remove the file or comment the line.
 
 Code Climate provides a **technical debt** percentage that can be retrieved
 nicely with :ref:`Badges`.
