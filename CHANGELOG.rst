@@ -2,6 +2,8 @@
 Changelog
 =========
 
+* Correct docs/config reference in ``.readthedocs.yml``
+
 v0.10.0 (2022-07-05)
 ------------------------------------------------------------
 
