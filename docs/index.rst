@@ -14,7 +14,7 @@ Contents
    contributing
    reference/index
    changelog
-   authors
+   AUTHORS
 
 Indices and tables
 ==================

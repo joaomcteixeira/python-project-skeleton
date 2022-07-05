@@ -1,4 +1,3 @@
-================================
 Python Package Skeleton Template
 ================================
 
@@ -27,7 +26,7 @@ Python Package Skeleton Template
     :alt: Read the Docs
 
 Summary
-=======
+-------
 
 This repository is a **skeleton template** for a **Python application/library**
 compliant with the latest team-development and software deployment practices
@@ -57,7 +56,7 @@ the CI needs for my Python projects, which include:
     * automated version bump with `bump2version`_, git tagging, and Python packaging to PyPI on Pull Request merge
 
 Motivation
-==========
+----------
 
 I developed this repository to understand how to implement the best practices
 for team-based development and automatic deployment of a scientific software
@@ -73,10 +72,10 @@ of what was actually being implemented. Hence, assembling this *template* from
 scratch as a full working repository was my best approach to obtain a useful
 understanding of CI.  Now, this repository serves as a reference guide for all
 my projects and hopefully will serve you, too. I keep constantly updating this
-repository, expect one to two update/reviews per year.
+repository, expect one to two updates/reviews per year.
 
 Acknowledgments
-===============
+---------------
 
 I want to acknowledge `ionel`_ discussions about *Packaging a python library*.
 They are a pillar in my understanding and decisions on this matter, and I really
@@ -96,7 +95,7 @@ I refer to other important sources of information as comments in the specific
 files. Thanks, everyone, for keeping open discussions on internet.
 
 How to use this repository
-==========================
+--------------------------
 
 The `documentation`_ pages explain how to use this template for your projects
 and the implementation details adopted here. The documentation pages also serve
@@ -104,14 +103,14 @@ to demonstrate how to compile documentation with Sphinx and deploy it online
 with `ReadTheDocs`_.
 
 Issues and Discussions
-======================
+----------------------
 
 As usual for any GitHub-based project, raise an `issue`_ if you find any bug or
 want to suggest an improvement, or open a `discussion`_ if you want to discuss
 or chat :wink:
 
 Projects using this skeleton
-============================
+----------------------------
 
 Below, a list of the projects using this repository as template or as base for
 their CI implementations:
@@ -126,7 +125,7 @@ If you use this repository as a reference for your works, let me know, so I
 list your work above, as well.
 
 Version
-=======
+-------
 
 v0.9.6
 

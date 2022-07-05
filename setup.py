@@ -31,7 +31,7 @@ def read(*names, **kwargs):
 
 long_description = '{}\n{}'.format(
     read('README.rst'),
-    read(join('docs', 'CHANGELOG.rst')),
+    read('CHANGELOG.rst'),
     )
 
 setup(
@@ -69,7 +69,7 @@ setup(
     project_urls={
         'webpage': 'https://github.com/joaomcteixeira/python-project-skeleton',
         'Documentation': 'https://python-project-skeleton.readthedocs.io/en/latest/',
-        'Changelog': 'https://github.com/joaomcteixeira/python-project-skeleton/blob/master/docs/CHANGELOG.rst',
+        'Changelog': 'https://github.com/joaomcteixeira/python-project-skeleton/blob/master/CHANGELOG.rst',
         'Issue Tracker': 'https://github.com/joaomcteixeira/python-project-skeleton/issues',
         'Discussion Forum': 'https://github.com/joaomcteixeira/python-project-skeleton/discussions',
         },

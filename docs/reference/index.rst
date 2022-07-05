@@ -4,4 +4,6 @@ Source documentation
 .. toctree::
     :glob:
 
-    sampleproject*
+    amodule
+    libs
+    main
