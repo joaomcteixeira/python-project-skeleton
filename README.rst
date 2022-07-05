@@ -127,7 +127,7 @@ list your work above, as well.
 Version
 -------
 
-v0.9.6
+v0.10.0
 
 .. _GitHub Actions: https://github.com/features/actions
 .. _PyPI: https://pypi.org
