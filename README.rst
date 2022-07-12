@@ -120,6 +120,7 @@ their CI implementations:
 * `THGLab/MCSCE <https://github.com/THGLab/MCSCE>`_
 * `joaomcteixeira/taurenmd <https://github.com/joaomcteixeira/taurenmd>`_
 * `MDAnalysis/mdacli <https://github.com/MDAnalysis/mdacli>`_
+* `MAICoS <https://gitlab.com/maicos-devel/maicos>`_
 
 If you use this repository as a reference for your works, let me know, so I
 list your work above, as well.
