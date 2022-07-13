@@ -1,13 +1,9 @@
 Python Package Skeleton Template
 ================================
 
-.. image:: https://github.com/joaomcteixeira/python-project-skeleton/workflows/tests/badge.svg?branch=main
-    :target: https://github.com/joaomcteixeira/python-project-skeleton/actions?workflow=tests
-    :alt: unit tests
-
-.. image:: https://github.com/joaomcteixeira/python-project-skeleton/workflows/build/badge.svg?branch=main
-    :target: https://github.com/joaomcteixeira/python-project-skeleton/actions?workflow=build
-    :alt: build
+.. image:: https://github.com/joaomcteixeira/python-project-skeleton/workflows/ci/badge.svg?branch=main
+    :target: https://github.com/joaomcteixeira/python-project-skeleton/actions?workflow=ci
+    :alt: CI
 
 .. image:: https://codecov.io/gh/joaomcteixeira/python-project-skeleton/branch/main/graph/badge.svg
     :target: https://codecov.io/gh/joaomcteixeira/python-project-skeleton

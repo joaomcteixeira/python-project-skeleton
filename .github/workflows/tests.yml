@@ -1,5 +1,5 @@
 # Tests unittest pass, documentation builds, and package builds
-name: tests
+name: ci
 
 on:
   push:
@@ -13,7 +13,8 @@ jobs:
     strategy:
       matrix:
         platform: [ubuntu-latest, macos-latest, windows-latest]
-        python-version: [3.7, 3.8, 3.9, "3.10"]
+        python-version: [3.7, 3.8, 3.9, '3.10']
+        tox-envs: [docs, lint, build, test, pr]
 
     steps:
     - uses: actions/checkout@v2
@@ -31,10 +32,11 @@ jobs:
         # tox-conda to the above list of dependencies
 
     - name: unit tests
-      run: tox -e test
+      run: tox -e ${{ matrix.tox-envs }}
 
     # from https://github.com/codecov/codecov-action
     - name: Upload coverage to Codecov
+      if: matrix.tox-envs == 'test'
       uses: codecov/codecov-action@v2
       with:
         files: ./coverage.xml
