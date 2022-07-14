@@ -19,7 +19,7 @@ jobs:
         tox-envs: [docs, lint, build, test, pr]
 
     runs-on: ${{ matrix.platform }}
-    if: !( ${{ matrix.tox-envs }} == 'pr' && github.event_name == 'push' && github.ref == 'refs/heads/main' )
+    if: !( matrix.tox-envs == 'pr' && github.event_name == 'push' && github.ref == 'refs/heads/main' )
 
     steps:
     - uses: actions/checkout@v2
