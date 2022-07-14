@@ -2,7 +2,7 @@
 Changelog
 =========
 
-* merge all tox envs in a single matrix
+* merge all tox envs in a single matrix (#30)
 
 v0.10.1 (2022-07-05)
 ------------------------------------------------------------
