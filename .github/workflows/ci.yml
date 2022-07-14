@@ -3,13 +3,11 @@ name: ci
 on:
   push:
     branches: [main]
-    if: ${{ matrix.tox-envs }} != 'pr'
   pull_request:
     branches: [main]
 
 jobs:
   build:
-    runs-on: ${{ matrix.platform }}
     strategy:
       matrix:
         platform: [ubuntu-latest, macos-latest, windows-latest]
@@ -19,6 +17,9 @@ jobs:
         # https://github.com/joaomcteixeira/python-project-skeleton/releases/tag/v0.10.1
         # below the list of tox envs that you wish to include in the matrix
         tox-envs: [docs, lint, build, test, pr]
+
+    runs-on: ${{ matrix.platform }}
+    if: !( ${{ matrix.tox-envs }} == 'pr' && github.event_name == 'push' && github.ref == 'refs/heads/main' )
 
     steps:
     - uses: actions/checkout@v2
