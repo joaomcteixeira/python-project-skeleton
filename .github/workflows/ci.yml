@@ -19,7 +19,7 @@ jobs:
         # below the list of tox envs that you wish to include in the matrix
         tox-envs: [docs, lint, build, test, pr]
         isMerge:
-            - ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+            - ${{ github.event_name == 'pull_request' && github.ref == 'refs/heads/main' }}
         exclude:
           - isMerge: true
             tox-envs: pr
