@@ -3,6 +3,7 @@ name: ci
 on:
   push:
     branches: [main]
+    if: ${{ matrix.tox-envs }} != 'pr'
   pull_request:
     branches: [main]
 
