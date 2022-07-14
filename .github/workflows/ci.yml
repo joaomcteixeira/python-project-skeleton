@@ -18,7 +18,8 @@ jobs:
         # https://github.com/joaomcteixeira/python-project-skeleton/releases/tag/v0.10.1
         # below the list of tox envs that you wish to include in the matrix
         tox-envs: [docs, lint, build, test, pr]
-        isMerge: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        isMerge:
+            - ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
         exclude:
           - isMerge: true
             tox-envs: pr
