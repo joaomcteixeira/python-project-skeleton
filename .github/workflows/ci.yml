@@ -17,15 +17,11 @@ jobs:
         # see version 0.10.1
         # https://github.com/joaomcteixeira/python-project-skeleton/releases/tag/v0.10.1
         # below the list of tox envs that you wish to include in the matrix
-        tox-envs: [docs, lint, build, test, pr]
+        tox-envs: [docs, lint, build, test]
 
     runs-on: ${{ matrix.platform }}
 
     steps:
-    - name: Cancel this build
-      if: !(matrix.tox-envs == 'pr' && github.event_name == 'push' && github.ref == 'refs/heads/main')
-      uses: andymckay/cancel-action@0.2
-
     - uses: actions/checkout@v2
 
     - name: Set up Python ${{ matrix.python-version }}
