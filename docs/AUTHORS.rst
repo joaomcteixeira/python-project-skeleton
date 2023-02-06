@@ -5,3 +5,7 @@ Authors
 
 .. _webpage: https://bit.ly/joaomcteixeira
 .. _github: https://github.com/joaomcteixeira
+
+* Kale Miller (`github`_)
+
+.. _github: https://github.com/kmiller96
