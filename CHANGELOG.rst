@@ -2,10 +2,7 @@
 Changelog
 =========
 
-v0.11.2 (2023-02-07)
-------------------------------------------------------------
-
-* Corrected typo in `.github/workflows/version-bump-and-package.yml`
+* Corrected `major` version bump action (#32)
 
 v0.11.1 (2022-07-14)
 ------------------------------------------------------------
