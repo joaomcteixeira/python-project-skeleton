@@ -1,3 +1,7 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = ["setuptools>=46.1.0", "wheel"]
+
 [project]
 name = "jmct-sampleproject"
 version = "0.11.2"
@@ -41,19 +45,16 @@ dependencies = [
     'matplotlib>=3',
 ]
 
+
 [project.urls]
 homepage = "https://github.com/joaomcteixeira/python-project-skeleton"
-documentation = "https://python-project-skeleton.readthedocs.io/en/latest/""
+documentation = "https://python-project-skeleton.readthedocs.io/en/latest/"
 repository = "https://github.com/joaomcteixeira/python-project-skeleton.git"
 changelog = "https://github.com/joaomcteixeira/python-project-skeleton/blob/main/CHANGELOG.rst"
 
-[project.optional_dependencies]
+[project.optional-dependencies]
 # e.g.:
 # rst = [ "docutils>=0.11" ]
 
 [project.scripts]
-#samplecli1 = "sampleproject.cli_int1:main"
-
-[build-system]
-build-backend = "setuptools.build_meta"
-requires = ["setuptools>=46.1.0", "wheel"]
+samplecli1 = "sampleproject.cli_int1:main"
