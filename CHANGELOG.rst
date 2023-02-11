@@ -2,6 +2,8 @@
 Changelog
 =========
 
+* updated check `CHANGELOG.rst` and error message (#34)
+
 v0.11.2 (2023-02-07)
 ------------------------------------------------------------
 
