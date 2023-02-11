@@ -29,6 +29,6 @@ with open(changelog, 'r') as fin:
                 '',
                 ]
             sys.exit(os.linesep.join(msg))
-            #raise ChangelogError(
+
         elif line.startswith('*'):
             break
