@@ -4,7 +4,7 @@ requires = ["setuptools>=46.1.0"]
 
 [project]
 name = "jmct-sampleproject"
-version = "0.11.2"
+version = "0.11.3"
 description = "A skeleton template for Python projects."
 readme = "README.rst"
 license = {text = "MIT"}
@@ -23,14 +23,13 @@ classifiers = [
     'Operating System :: POSIX',
     'Operating System :: MacOS',
     'Operating System :: Microsoft',
-    'Programming Language :: Python :: 3.7',
     'Programming Language :: Python :: 3.8',
     'Programming Language :: Python :: 3.9',
     'Programming Language :: Python :: 3.10',
+    'Programming Language :: Python :: 3.11',
     'Topic :: Scientific/Engineering :: Bio-Informatics',
     "Development Status :: 4 - Beta",
     "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
 ]
 
 keywords=[
