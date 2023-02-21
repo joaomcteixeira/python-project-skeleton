@@ -1,0 +1,117 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = ["setuptools>=46.1.0"]
+
+[project]
+name = "jmct-sampleproject"
+version = "0.11.3"
+description = "A skeleton template for Python projects."
+readme = "README.rst"
+license = {text = "MIT"}
+authors = [
+    {name = "Joao Miguel Correia Teixeira", email = "joaomcteixeira@gmail.com"},
+]
+
+# complete classifier list:
+# http://pypi.org/classifiers/
+classifiers = [
+    'Development Status :: 4 - Beta',
+    # 'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)',
+    'License :: OSI Approved :: MIT License',
+    'Intended Audience :: Science/Research',
+    'Natural Language :: English',
+    'Operating System :: POSIX',
+    'Operating System :: MacOS',
+    'Operating System :: Microsoft',
+    'Programming Language :: Python :: 3.8',
+    'Programming Language :: Python :: 3.9',
+    'Programming Language :: Python :: 3.10',
+    'Programming Language :: Python :: 3.11',
+    'Topic :: Scientific/Engineering :: Bio-Informatics',
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python :: 3",
+]
+
+keywords=[
+    'ci', 'continuous-integration', 'project-template', 'project-skeleton',
+    'sample-project',
+    # eg: 'keyword1', 'keyword2', 'keyword3',
+]
+
+requires-python = ">=3.8, <4"
+dependencies = [
+    # https://stackoverflow.com/questions/14399534
+    'matplotlib>=3',
+]
+
+
+[project.urls]
+homepage = "https://github.com/joaomcteixeira/python-project-skeleton"
+documentation = "https://python-project-skeleton.readthedocs.io/en/latest/"
+repository = "https://github.com/joaomcteixeira/python-project-skeleton.git"
+changelog = "https://github.com/joaomcteixeira/python-project-skeleton/blob/main/CHANGELOG.rst"
+
+[project.optional-dependencies]
+# e.g.:
+# rst = [ "docutils>=0.11" ]
+
+[project.scripts]
+samplecli1 = "sampleproject.cli_int1:main"
+
+
+# my favourite configuration for flake8 styling
+# https://flake8.pycqa.org/en/latest/#
+[tool.flake8]
+max_line_length = 80
+hang-closing = true
+ignore = [
+    "W293",
+    "W503",
+    "D412",
+    "D105"
+]
+docstring-convention = "numpy"
+# normally I exclude init because it is very hard to configure init
+# without breaking many rules
+exclude = "src/sampleproject/__init__.py"
+
+# configuration for the isort module
+# https://github.com/timothycrosley/isort
+[tool.isort]
+skip = "__init__.py"
+line_length = 80
+indent = 4
+multi_line_output = 8
+include_trailing_comma = true
+lines_after_imports = 2
+sections="FUTURE,STDLIB,THIRDPARTY,FIRSTPARTY,LOCALFOLDER"
+#known_future_library=future,pies
+#known_standard_library=std,std2
+known_first_party = ["sampleproject"]
+# you should add here your known thirdparties, it will facilitate
+# the job to isort
+known_third_party = [
+    "hypothesis",
+    "matplotlib",
+    "numpy",
+    "pytest"
+]
+
+[tool.pytest.ini_options]
+#norecursedirs =
+#migrations
+addopts = "-p pytest_cov"
+python_files = [
+    "test_*.py",
+    "*_test.py",
+    "tests.py"
+]
+#addopts =
+#    -ra
+#    --strict
+#    --doctest-modules
+#    --doctest-glob=\*.rst
+#    --tb=short
+testpaths = [
+    "tests"
+]
