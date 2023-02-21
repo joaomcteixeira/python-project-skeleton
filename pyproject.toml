@@ -99,10 +99,6 @@ known_third_party = [
 ]
 
 [tool.pytest.ini_options]
-# If a pytest section is found in one of the possible config files
-# (pytest.ini, tox.ini or setup.cfg), then pytest will not look for any others,
-# so if you add a pytest config section elsewhere,
-# you will need to delete this section from setup.cfg.
 #norecursedirs =
 #migrations
 addopts = "-p pytest_cov"
