@@ -58,3 +58,65 @@ changelog = "https://github.com/joaomcteixeira/python-project-skeleton/blob/main
 
 [project.scripts]
 samplecli1 = "sampleproject.cli_int1:main"
+
+
+# my favourite configuration for flake8 styling
+# https://flake8.pycqa.org/en/latest/#
+[tool.flake8]
+max_line_length = 80
+hang-closing = true
+ignore = [
+    "W293",
+    "W503",
+    "D412",
+    "D105"
+]
+docstring-convention = "numpy"
+# normally I exclude init because it is very hard to configure init
+# without breaking many rules
+exclude = "src/sampleproject/__init__.py"
+
+# configuration for the isort module
+# https://github.com/timothycrosley/isort
+[tool.isort]
+skip = "__init__.py"
+line_length = 80
+indent = 4
+multi_line_output = 8
+include_trailing_comma = true
+lines_after_imports = 2
+sections="FUTURE,STDLIB,THIRDPARTY,FIRSTPARTY,LOCALFOLDER"
+#known_future_library=future,pies
+#known_standard_library=std,std2
+known_first_party = ["sampleproject"]
+# you should add here your known thirdparties, it will facilitate
+# the job to isort
+known_third_party = [
+    "hypothesis",
+    "matplotlib",
+    "numpy",
+    "pytest"
+]
+
+[tool.pytest.ini_options]
+# If a pytest section is found in one of the possible config files
+# (pytest.ini, tox.ini or setup.cfg), then pytest will not look for any others,
+# so if you add a pytest config section elsewhere,
+# you will need to delete this section from setup.cfg.
+#norecursedirs =
+#migrations
+addopts = "-p pytest_cov"
+python_files = [
+    "test_*.py",
+    "*_test.py",
+    "tests.py"
+]
+#addopts =
+#    -ra
+#    --strict
+#    --doctest-modules
+#    --doctest-glob=\*.rst
+#    --tb=short
+testpaths = [
+    "tests"
+]
